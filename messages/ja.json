@@ -1,0 +1,90 @@
+{
+	"Header": {
+		"services": "サービス",
+		"portfolio": "ポートフォリオ",
+		"about": "会社概要",
+		"contact": "お問い合わせ"
+	},
+	"Hero": {
+		"title": "スマートウェブサイト",
+		"subtitle": "グローバルSEO。日本製。",
+		"description": "京都から最先端のウェブ開発とSEOの専門知識でデジタルプレゼンスを変革します。",
+		"ctaPrimary": "プロジェクトを開始",
+		"ctaSecondary": "サービスを見る"
+	},
+	"Services": {
+		"title": "成果を生み出すサービス",
+		"subtitle": "コンセプトから立ち上げまで、ビジネスニーズに合わせた総合的なウェブソリューションを提供します。",
+		"wordpress": {
+			"title": "WordPress & Elementor開発",
+			"description": "Elementor Proの力で素晴らしくカスタマイズ可能なデザインのプロフェッショナルなWordPressサイト。",
+			"features": [
+				"カスタムElementorウィジェット",
+				"WooCommerce統合",
+				"速度最適化",
+				"レスポンシブデザイン"
+			]
+		},
+		"react": {
+			"title": "React & Next.jsカスタムウェブサイト",
+			"description": "最新のReactとNext.js技術で構築された超高速でモダンなウェブアプリケーション。",
+			"features": [
+				"サーバーサイドレンダリング",
+				"API統合",
+				"プログレッシブウェブアプリ",
+				"Tailwind CSSスタイリング"
+			]
+		},
+		"seo": {
+			"title": "SEO最適化サービス",
+			"description": "可視性を高め、オーガニックトラフィックを促進する包括的なSEO戦略。",
+			"features": [
+				"テクニカルSEO監査",
+				"コンテンツ最適化",
+				"リンクビルディング戦略",
+				"パフォーマンス追跡"
+			]
+		},
+		"maintenance": {
+			"title": "ウェブサイトメンテナンス",
+			"description": "サイトを安全で最新の状態に保つ"
+		},
+		"hosting": {
+			"title": "ウェブホスティング",
+			"description": "高速で信頼性の高いホスティングソリューション"
+		},
+		"content": {
+			"title": "コンテンツ戦略",
+			"description": "成果につながる魅力的なコンテンツ"
+		},
+		"automation": {
+			"title": "プロセス自動化",
+			"description": "n8nワークフローで効率化"
+		}
+	},
+	"Footer": {
+		"companyName": "京都ウェブスタジオ",
+		"tagline": "スマートウェブサイト。グローバルSEO。日本製。",
+		"services": {
+			"title": "サービス",
+			"webDevelopment": "ウェブ開発",
+			"seoOptimization": "SEO最適化",
+			"wordpress": "WordPressサイト",
+			"react": "Reactアプリケーション"
+		},
+		"company": {
+			"title": "会社",
+			"about": "会社概要",
+			"portfolio": "ポートフォリオ",
+			"blog": "ブログ",
+			"contact": "お問い合わせ"
+		},
+		"contactInfo": {
+			"title": "連絡先",
+			"location": "京都、日本",
+			"email": "hello@kyotowebstudio.com",
+			"phone": "+81 XXX-XXXX-XXXX"
+		},
+		"copyright": "© 2025 京都ウェブスタジオ。全著作権所有。| 京都で❤️を込めて制作"
+	}
+}

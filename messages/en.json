@@ -1,0 +1,90 @@
+{
+	"Header": {
+		"services": "Services",
+		"portfolio": "Portfolio",
+		"about": "About",
+		"contact": "Contact"
+	},
+	"Hero": {
+		"title": "SMART WEBSITES",
+		"subtitle": "global seo. made in japan.",
+		"description": "Transform your digital presence with cutting-edge web development and SEO expertise from the heart of Kyoto.",
+		"ctaPrimary": "Start Your Project",
+		"ctaSecondary": "Explore Services"
+	},
+	"Services": {
+		"title": "Services That Drive Results",
+		"subtitle": "From concept to launch, we deliver comprehensive web solutions tailored to your business needs.",
+		"wordpress": {
+			"title": "WordPress & Elementor Development",
+			"description": "Professional WordPress sites with the power of Elementor Pro for stunning, customizable designs.",
+			"features": [
+				"Custom Elementor widgets",
+				"WooCommerce integration",
+				"Speed optimization",
+				"Responsive design"
+			]
+		},
+		"react": {
+			"title": "React & Next.js Custom Websites",
+			"description": "Blazing-fast, modern web applications built with the latest React and Next.js technologies.",
+			"features": [
+				"Server-side rendering",
+				"API integrations",
+				"Progressive web apps",
+				"Tailwind CSS styling"
+			]
+		},
+		"seo": {
+			"title": "SEO Optimization Services",
+			"description": "Comprehensive SEO strategies to boost your visibility and drive organic traffic.",
+			"features": [
+				"Technical SEO audits",
+				"Content optimization",
+				"Link building strategy",
+				"Performance tracking"
+			]
+		},
+		"maintenance": {
+			"title": "Website Maintenance",
+			"description": "Keep your site secure and up-to-date"
+		},
+		"hosting": {
+			"title": "Web Hosting",
+			"description": "Fast, reliable hosting solutions"
+		},
+		"content": {
+			"title": "Content Strategy",
+			"description": "Engaging content that converts"
+		},
+		"automation": {
+			"title": "Process Automation",
+			"description": "Streamline with n8n workflows"
+		}
+	},
+	"Footer": {
+		"companyName": "Kyoto Web Studio",
+		"tagline": "Smart Websites. Global SEO. Made in Japan.",
+		"services": {
+			"title": "Services",
+			"webDevelopment": "Web Development",
+			"seoOptimization": "SEO Optimization",
+			"wordpress": "WordPress Sites",
+			"react": "React Applications"
+		},
+		"company": {
+			"title": "Company",
+			"about": "About Us",
+			"portfolio": "Portfolio",
+			"blog": "Blog",
+			"contact": "Contact"
+		},
+		"contactInfo": {
+			"title": "Contact Info",
+			"location": "Kyoto, Japan",
+			"email": "hello@kyotowebstudio.com",
+			"phone": "+81 XXX-XXXX-XXXX"
+		},
+		"copyright": "© 2025 Kyoto Web Studio. All rights reserved. | Crafted with ❤️ in Kyoto"
+	}
+}

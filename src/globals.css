@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+@import 'tailwindcss';
+
+@layer base {
+	:root {
+		--navy: #001f3f;
+		--indigo: #4f46e5;
+		--orange: #ff851b;
+		--cyan: #06b6d4;
+		--white: #ffffff;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+@layer utilities {
+	.animation-delay-200 {
+		animation-delay: 200ms;
+	}
+
+	.animation-delay-400 {
+		animation-delay: 400ms;
+	}
+
+	.animate-fadeInUp {
+		animation: fadeInUp 1s ease-out forwards;
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
