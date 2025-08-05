@@ -1,14 +1,16 @@
 'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '../../../i18n/routing';
 
 const Hero = () => {
 	const t = useTranslations('Hero');
+	const locale = useLocale();
+	const isJapanese = locale === 'ja';
+
 	const { scrollY } = useScroll();
 
 	// Logo animations based on scroll
@@ -17,7 +19,7 @@ const Hero = () => {
 	const logoY = useTransform(scrollY, [0, 300], [0, -100]);
 
 	return (
-		<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+		<section className="relative min-h-screen flex items-center justify-center p-4">
 			{/* Video Background */}
 			<video
 				autoPlay
@@ -34,7 +36,7 @@ const Hero = () => {
 
 			{/* Animated Logo */}
 			<motion.div
-				className="absolute top-[33%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none"
+				className="absolute top-[25%] md:top-[30%] lg:top-[33%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none"
 				style={{
 					scale: logoScale,
 					opacity: logoOpacity,
@@ -48,7 +50,7 @@ const Hero = () => {
 					delay: 0.3,
 				}}
 			>
-				<div className="relative w-[200px] h-[150px] md:w-[300px] md:h-[225px] lg:w-[700px] lg:h-[400px]">
+				<div className="relative w-[250px] h-[200px] md:w-[450px] md:h-[375px] lg:w-[700px] lg:h-[400px]">
 					<Image
 						src="/images/logo.png"
 						alt="Kyoto Web Studio Logo"
@@ -67,16 +69,28 @@ const Hero = () => {
 					animate={{ opacity: 1 }}
 					transition={{ delay: 1.5, duration: 1 }}
 				>
-					<span className="block font-['Anton'] text-4xl md:text-6xl lg:text-7xl text-white leading-none">
+					<span
+						className={`block tracking-wide text-3xl md:text-6xl lg:text-7xl text-white leading-none ${
+							isJapanese ? 'font-zenOldMincho' : "font-['Anton']"
+						}`}
+					>
 						{t('title')}
 					</span>
-					<span className="block font-['Open_Sans'] text-2xl md:text-4xl lg:text-5xl text-[#06B6D4] font-light mt-3">
+					<span
+						className={`block text-2xl md:text-4xl lg:text-5xl text-[#06B6D4] font-light mt-3 ${
+							isJapanese
+								? 'font-notoSansJP'
+								: "font-['Open_Sans']"
+						}`}
+					>
 						{t('subtitle')}
 					</span>
 				</motion.h1>
 
 				<motion.p
-					className="text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-2xl mx-auto"
+					className={`text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-2xl mx-auto ${
+						isJapanese ? 'font-notoSansJP' : ''
+					}`}
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 1.8, duration: 0.8 }}
@@ -92,14 +106,18 @@ const Hero = () => {
 				>
 					<Link
 						href="/contact"
-						className="inline-flex items-center px-6 py-3 md:px-8 md:py-4 bg-[#FF851B] text-white font-semibold rounded-full hover:bg-[#FF851B]/90 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
+						className={`inline-flex items-center px-6 py-3 md:px-8 md:py-4 bg-[#FF851B] text-white font-semibold rounded-full hover:bg-[#FF851B]/90 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl ${
+							isJapanese ? 'font-notoSansJP' : ''
+						}`}
 					>
 						{t('ctaPrimary')}
 						<ArrowRight className="ml-2 w-5 h-5" />
 					</Link>
 					<Link
 						href="/services"
-						className="inline-flex items-center px-6 py-3 md:px-8 md:py-4 border-2 border-[#06B6D4] text-white font-semibold rounded-full hover:bg-[#06B6D4] hover:border-[#06B6D4] transform hover:-translate-y-1 transition-all duration-300"
+						className={`inline-flex items-center px-6 py-3 md:px-8 md:py-4 border-2 border-[#06B6D4] text-white font-semibold rounded-full hover:bg-[#06B6D4] hover:border-[#06B6D4] transform hover:-translate-y-1 transition-all duration-300 ${
+							isJapanese ? 'font-notoSansJP' : ''
+						}`}
 					>
 						{t('ctaSecondary')}
 					</Link>

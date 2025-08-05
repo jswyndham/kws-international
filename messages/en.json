@@ -12,8 +12,27 @@
 		"ctaPrimary": "Start Your Project",
 		"ctaSecondary": "Explore Services"
 	},
+	"Portfolio": {
+		"title": "SELECTED",
+		"titleHighlight": "PORTFOLIO",
+		"subtitle": "Crafting digital experiences that drive results for businesses in Japan and beyond",
+		"cta": "Ready to transform your digital presence?",
+		"ctaButton": "Start Your Project",
+		"romancingApproachTitle": "Design Approach",
+		"romancingPoint1": "Performance-first architecture with Next.js for lightning-fast page loads",
+		"romancingPoint2": "Content management system integration for easy updates and SEO optimization",
+		"romancingPoint3": "Strategic monetization implementation with affiliate systems and user analytics",
+		"asobiApproachTitle": "Design Approach",
+		"asobiPoint1": "Custom WordPress solution with Elementor Pro for maximum flexibility",
+		"asobiPoint2": "Integrated booking system to streamline guest reservations",
+		"asobiPoint3": "Mobile-first responsive design for travelers on the go",
+		"noruApproachTitle": "Design Approach",
+		"noruPoint1": "Bilingual SEO strategy targeting both Japanese and international tourists",
+		"noruPoint2": "High-converting landing pages with clear calls-to-action",
+		"noruPoint3": "Modern tech stack ensuring scalability and performance"
+	},
 	"Services": {
-		"title": "Services That Drive Results",
+		"title": "SERVICES THAT DRIVE RESULTS",
 		"subtitle": "From concept to launch, we deliver comprehensive web solutions tailored to your business needs.",
 		"wordpress": {
 			"title": "WordPress & Elementor Development",

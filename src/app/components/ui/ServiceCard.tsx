@@ -84,7 +84,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 				</motion.div>
 
 				<motion.h3
-					className="text-2xl font-bold text-white mb-4"
+					className="font-notoSansJP text-xl md:text-2xl font-bold text-white mb-4"
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ delay: 0.2 + index * 0.1 }}
@@ -93,7 +93,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 				</motion.h3>
 
 				<motion.p
-					className="text-white/70 mb-6"
+					className="font-zenOldMincho text-white/70 mb-6"
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ delay: 0.3 + index * 0.1 }}
@@ -105,7 +105,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 					{features.map((feature, i) => (
 						<motion.li
 							key={i}
-							className="text-white/60 text-sm flex items-start"
+							className="font-notoSansJP text-white/60 text-sm flex items-start"
 							custom={i}
 							initial="hidden"
 							animate="visible"

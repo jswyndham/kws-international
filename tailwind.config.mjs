@@ -19,6 +19,15 @@ export default {
 				display: ['Oswald', 'sans-serif'],
 				body: ['Inter', 'sans-serif'],
 				hanken: ['Hanken Grotesk', 'sans-serif'],
+				'open-sans': ['var(--font-open-sans)'],
+				anton: ['var(--font-anton)'],
+				bebas: ['var(--font-bebas)'],
+				impact: [
+					'Impact',
+					'Haettenschweiler',
+					'Arial Narrow Bold',
+					'sans-serif',
+				],
 			},
 			fontSize: {
 				'3xl': ['1.875rem', { lineHeight: '2.25rem' }],

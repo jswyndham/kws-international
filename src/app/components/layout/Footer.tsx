@@ -85,14 +85,6 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link
-									href="/portfolio"
-									className="text-white/60 hover:text-[#06B6D4] transition-colors"
-								>
-									{t('company.portfolio')}
-								</Link>
-							</li>
-							<li>
-								<Link
 									href="/blog"
 									className="text-white/60 hover:text-[#06B6D4] transition-colors"
 								>

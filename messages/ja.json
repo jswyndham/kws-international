@@ -12,6 +12,25 @@
 		"ctaPrimary": "プロジェクトを開始",
 		"ctaSecondary": "サービスを見る"
 	},
+	"Portfolio": {
+		"title": "厳選",
+		"titleHighlight": "ポートフォリオ",
+		"subtitle": "日本とその先のビジネスに成果をもたらすデジタル体験を創造",
+		"cta": "デジタルプレゼンスを変革する準備はできましたか？",
+		"ctaButton": "プロジェクトを開始",
+		"romancingApproachTitle": "デザインアプローチ",
+		"romancingPoint1": "Next.jsによるパフォーマンス優先アーキテクチャで超高速ページ読み込みを実現",
+		"romancingPoint2": "簡単な更新とSEO最適化のためのコンテンツ管理システム統合",
+		"romancingPoint3": "アフィリエイトシステムとユーザー分析による戦略的収益化の実装",
+		"asobiApproachTitle": "デザインアプローチ",
+		"asobiPoint1": "Elementor Proを使用した最大限の柔軟性を持つカスタムWordPressソリューション",
+		"asobiPoint2": "ゲストの予約を効率化する統合予約システム",
+		"asobiPoint3": "移動中の旅行者向けのモバイルファーストレスポンシブデザイン",
+		"noruApproachTitle": "デザインアプローチ",
+		"noruPoint1": "日本人観光客と外国人観光客の両方をターゲットとしたバイリンガルSEO戦略",
+		"noruPoint2": "明確なCTAを備えた高コンバージョンランディングページ",
+		"noruPoint3": "スケーラビリティとパフォーマンスを保証する最新技術スタック"
+	},
 	"Services": {
 		"title": "成果を生み出すサービス",
 		"subtitle": "コンセプトから立ち上げまで、ビジネスニーズに合わせた総合的なウェブソリューションを提供します。",

@@ -1,5 +1,11 @@
 import type { Metadata, Viewport } from 'next';
-import { Open_Sans } from 'next/font/google';
+import {
+	Anton,
+	Open_Sans,
+	Bebas_Neue,
+	Zen_Old_Mincho,
+	Noto_Sans_JP,
+} from 'next/font/google';
 import '../globals.css';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
@@ -10,6 +16,36 @@ const openSans = Open_Sans({
 	subsets: ['latin'],
 	display: 'swap',
 	variable: '--font-open-sans',
+});
+
+const anton = Anton({
+	weight: '400',
+	subsets: ['latin'],
+	display: 'swap',
+	variable: '--font-anton',
+});
+
+const bebasNeue = Bebas_Neue({
+	weight: '400',
+	subsets: ['latin'],
+	display: 'swap',
+	variable: '--font-bebas',
+});
+
+// Zen Old Mincho for body text
+const zenOldMincho = Zen_Old_Mincho({
+	weight: '400',
+	subsets: ['latin'],
+	display: 'swap',
+	variable: '--font-zen-old-mincho',
+});
+
+// Noto Sans JP for bold/headers
+const notoSansJP = Noto_Sans_JP({
+	weight: ['500', '700', '900'],
+	subsets: ['latin'],
+	display: 'swap',
+	variable: '--font-noto-sans-jp',
 });
 
 type Props = {
@@ -147,7 +183,10 @@ export default async function LocaleLayout({
 	const messages = await getMessages();
 
 	return (
-		<html lang={locale} className={openSans.variable}>
+		<html
+			lang={locale}
+			className={`${anton.variable} ${openSans.variable} ${bebasNeue.variable} ${zenOldMincho.variable} ${notoSansJP.variable}`}
+		>
 			<body className={`${openSans.className} antialiased`}>
 				<NextIntlClientProvider messages={messages}>
 					{children}
