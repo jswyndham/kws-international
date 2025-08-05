@@ -11,7 +11,7 @@ const ServicesHero = () => {
 	const isJapanese = locale === 'ja';
 
 	return (
-		<section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+		<section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden px-4 py-40">
 			{/* Background gradient */}
 			<div className="absolute inset-0 bg-gradient-to-br from-[#001F3F] via-[#001F3F]/95 to-[#4F46E5]/20" />
 

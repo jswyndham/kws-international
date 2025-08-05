@@ -32,46 +32,6 @@ const Footer = () => {
 
 					<div>
 						<h4 className="text-white font-semibold mb-4">
-							{t('services.title')}
-						</h4>
-						<ul className="space-y-2">
-							<li>
-								<Link
-									href="/services#web-development"
-									className="text-white/60 hover:text-[#06B6D4] transition-colors"
-								>
-									{t('services.webDevelopment')}
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/services#seo"
-									className="text-white/60 hover:text-[#06B6D4] transition-colors"
-								>
-									{t('services.seoOptimization')}
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/services#wordpress"
-									className="text-white/60 hover:text-[#06B6D4] transition-colors"
-								>
-									{t('services.wordpress')}
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/services#react"
-									className="text-white/60 hover:text-[#06B6D4] transition-colors"
-								>
-									{t('services.react')}
-								</Link>
-							</li>
-						</ul>
-					</div>
-
-					<div>
-						<h4 className="text-white font-semibold mb-4">
 							{t('company.title')}
 						</h4>
 						<ul className="space-y-2">
@@ -106,12 +66,7 @@ const Footer = () => {
 						<h4 className="text-white font-semibold mb-4">
 							{t('contactInfo.title')}
 						</h4>
-						<ul className="space-y-3">
-							<li className="flex items-center text-white/60">
-								<MapPin className="w-4 h-4 mr-2 text-[#06B6D4]" />
-								{t('contactInfo.location')}
-							</li>
-						</ul>
+
 						<div className="flex space-x-4 mt-6">
 							<Link
 								href="https://github.com/jswyndham"
@@ -122,7 +77,7 @@ const Footer = () => {
 							>
 								<Github className="w-5 h-5" />
 							</Link>
-							<a
+							<Link
 								href="https://www.linkedin.com/in/james-saunders-wyndham-b6015599/"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -130,16 +85,7 @@ const Footer = () => {
 								aria-label="LinkedIn"
 							>
 								<Linkedin className="w-5 h-5" />
-							</a>
-							<a
-								href="https://twitter.com"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-white/60 hover:text-[#06B6D4] transition-colors"
-								aria-label="Twitter"
-							>
-								<Twitter className="w-5 h-5" />
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>

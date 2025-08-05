@@ -11,7 +11,7 @@ const AboutHero = () => {
 	const isJapanese = locale === 'ja';
 
 	return (
-		<section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#001F3F] via-black to-black">
+		<section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#001F3F] via-black to-black px-4 py-32">
 			{/* Animated background elements */}
 			<motion.div
 				className="absolute inset-0 opacity-10"

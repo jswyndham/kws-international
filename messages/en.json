@@ -436,12 +436,12 @@
 			"contact": "Contact"
 		},
 		"contactInfo": {
-			"title": "Contact Info",
+			"title": "Social Media",
 			"location": "Kyoto, Japan",
 			"email": "hello@kyotowebstudio.com",
 			"phone": "+81 XXX-XXXX-XXXX"
 		},
-		"copyright": "© 2025 Kyoto Web Studio. All rights reserved. | Crafted with ❤️ in Kyoto"
+		"copyright": "© 2025 Kyoto Web Studio. All rights reserved."
 	},
 	"ContactMeta": {
 		"title": "Contact Kyoto Web Studio | Web Development & SEO Services",

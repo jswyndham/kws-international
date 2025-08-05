@@ -179,7 +179,7 @@ const ServicesPricing = () => {
 
 					<div className="absolute bottom-0 left-0 right-0 h-full">
 						<motion.h2
-							className={`absolute text-3xl md:text-6xl lg:text-8xl font-light text-white tracking-wide ${
+							className={`absolute text-3xl md:text-6xl xl:text-8xl font-light text-white tracking-wide ${
 								isJapanese
 									? 'font-notoSansJP'
 									: 'font-helvetica'
@@ -245,7 +245,7 @@ const ServicesPricing = () => {
 							<motion.button
 								key={key}
 								onClick={() => setActiveTab(key)}
-								className={`flex items-center gap-3 px-6 py-3 rounded-full border-2 transition-all ${
+								className={`flex items-center w-72 gap-3 px-6 py-3 rounded-full border-2 transition-all ${
 									activeTab === key
 										? 'bg-white text-[#001F3F] border-white'
 										: 'bg-transparent text-white border-white/30 hover:border-white/60'

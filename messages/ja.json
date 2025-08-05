@@ -437,11 +437,9 @@
 		},
 		"contactInfo": {
 			"title": "連絡先",
-			"location": "京都、日本",
-			"email": "hello@kyotowebstudio.com",
-			"phone": "+81 XXX-XXXX-XXXX"
+			"location": "京都、日本"
 		},
-		"copyright": "© 2025 京都ウェブスタジオ。全著作権所有。| 京都で❤️を込めて制作"
+		"copyright": "© 2025 京都ウェブスタジオ"
 	},
 	"ContactMeta": {
 		"title": "お問い合わせ | 京都ウェブスタジオ - ウェブ制作・SEOサービス",

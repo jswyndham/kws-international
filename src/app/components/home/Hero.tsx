@@ -36,7 +36,7 @@ const Hero = () => {
 
 			{/* Animated Logo */}
 			<motion.div
-				className="absolute top-[25%] md:top-[30%] lg:top-[33%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none"
+				className="absolute top-[28%] md:top-[30%] lg:top-[33%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none"
 				style={{
 					scale: logoScale,
 					opacity: logoOpacity,
@@ -62,7 +62,7 @@ const Hero = () => {
 			</motion.div>
 
 			{/* Content */}
-			<div className="relative z-10 max-w-7xl mx-auto px-6 text-center mt-32 md:mt-96">
+			<div className="relative z-10 max-w-7xl mx-auto px-6 text-center mt-56 md:mt-96">
 				<motion.h1
 					className="mb-6"
 					initial={{ opacity: 0 }}
