@@ -46,7 +46,7 @@ const AboutHero = () => {
 						</h1>
 
 						<p
-							className={`text-xl md:text-2xl text-white/80 mb-8 ${
+							className={`text-lg md:text-xl text-white/80 mb-8 ${
 								isJapanese ? 'font-zenOldMincho' : ''
 							}`}
 						>
@@ -122,7 +122,7 @@ const AboutHero = () => {
 									{/* Name with animated reveal */}
 									<div className="overflow-hidden mb-2">
 										<motion.h3
-											className={`text-white text-3xl md:text-4xl font-bold ${
+											className={`text-white text-lg md:text-2xl font-bold ${
 												isJapanese
 													? 'font-notoSansJP'
 													: 'font-helvetica'
@@ -142,7 +142,7 @@ const AboutHero = () => {
 									{/* Title with staggered animation */}
 									<div className="overflow-hidden">
 										<motion.p
-											className={`text-[#06B6D4] text-lg md:text-xl ${
+											className={`text-[#06B6D4] text-md md:text-lg ${
 												isJapanese
 													? 'font-zenOldMincho'
 													: ''

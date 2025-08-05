@@ -91,7 +91,7 @@ const AboutStory = () => {
 				</div>
 
 				<motion.p
-					className={`text-xl text-white/70 max-w-3xl mt-6 ${
+					className={`text-md md:text-xl text-white/70 max-w-3xl mt-6 ${
 						isJapanese ? 'font-zenOldMincho' : ''
 					}`}
 					initial={{ opacity: 0, y: 20 }}

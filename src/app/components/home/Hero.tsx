@@ -50,7 +50,7 @@ const Hero = () => {
 					delay: 0.3,
 				}}
 			>
-				<div className="relative w-[250px] h-[200px] md:w-[450px] md:h-[375px] lg:w-[700px] lg:h-[400px]">
+				<div className="relative w-[225px] h-[175px] md:w-[450px] md:h-[375px] lg:w-[700px] lg:h-[400px]">
 					<Image
 						src="/images/logo.png"
 						alt="Kyoto Web Studio Logo"
@@ -70,14 +70,14 @@ const Hero = () => {
 					transition={{ delay: 1.5, duration: 1 }}
 				>
 					<span
-						className={`block tracking-wide text-3xl md:text-6xl lg:text-7xl text-white leading-none ${
+						className={`block tracking-wide text-2xl md:text-6xl lg:text-7xl text-white leading-none ${
 							isJapanese ? 'font-zenOldMincho' : "font-['Anton']"
 						}`}
 					>
 						{t('title')}
 					</span>
 					<span
-						className={`block text-2xl md:text-4xl lg:text-5xl text-[#06B6D4] font-light mt-3 ${
+						className={`block text-xl md:text-4xl lg:text-5xl text-[#06B6D4] font-light md:mt-3 ${
 							isJapanese
 								? 'font-notoSansJP'
 								: "font-['Open_Sans']"
@@ -88,7 +88,7 @@ const Hero = () => {
 				</motion.h1>
 
 				<motion.p
-					className={`text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-2xl mx-auto ${
+					className={`text-md md:text-xl lg:text-2xl text-white/90 mb-10 max-w-2xl mx-auto ${
 						isJapanese ? 'font-notoSansJP' : ''
 					}`}
 					initial={{ opacity: 0, y: 20 }}
