@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
 
 		// Send email to Kyoto Web Studio
 		const { data, error } = await resend.emails.send({
-			from: 'Kyoto Web Studio <onboarding@resend.dev>', // Update with your verified domain
+			from: 'Kyoto Web Studio <www.kyotowebstudio.com/>', // Update with your verified domain
 			to: ['kyotojim2@gmail.com'], // Your email
 			subject: `New Contact Form Submission from ${name}`,
 			html: `
