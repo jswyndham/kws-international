@@ -11,7 +11,7 @@ const AboutHero = () => {
 	const isJapanese = locale === 'ja';
 
 	return (
-		<section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#001F3F] via-[#001F3F]/95 to-[#4F46E5]/20">
+		<section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#001F3F] via-black to-black">
 			{/* Animated background elements */}
 			<motion.div
 				className="absolute inset-0 opacity-10"
@@ -88,43 +88,81 @@ const AboutHero = () => {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8, delay: 0.4 }}
 					>
-						<div className="relative w-full h-[400px] rounded-2xl overflow-hidden">
-							<div className="absolute inset-0 bg-gradient-to-br from-[#FF851B]/20 to-[#06B6D4]/20" />
+						<div className="relative w-full h-[400px] rounded-2xl overflow-hidden group">
+							{/* Gradient overlay */}
+							<div className="absolute inset-0 bg-gradient-to-t from-[#001F3F]/90 via-[#001F3F]/20 to-transparent z-10" />
+
+							{/* Image */}
 							<Image
-								src="/images/kyoto-temple.jpg"
-								alt="Kyoto Temple"
+								src="/images/about/james-profile.jpg"
+								alt="James - Founder of Kyoto Web Studio"
 								fill
-								className="object-cover"
+								className="object-cover group-hover:scale-105 transition-transform duration-700"
 							/>
-							<div className="absolute inset-0 flex items-center justify-center">
-								<motion.div
-									className="text-center"
-									initial={{ scale: 0.8, opacity: 0 }}
-									animate={{ scale: 1, opacity: 1 }}
-									transition={{ duration: 0.8, delay: 0.6 }}
-								>
-									<div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
-										<p
-											className={`text-[#001F3F] text-2xl font-bold mb-2 ${
+
+							{/* Bottom text container with glass morphism */}
+							<motion.div
+								className="absolute -bottom-2 left-0 right-0 z-20"
+								initial={{ y: 20, opacity: 0 }}
+								animate={{ y: 0, opacity: 1 }}
+								transition={{ duration: 0.8, delay: 0.6 }}
+							>
+								<div className="p-8">
+									{/* Decorative line */}
+									<motion.div
+										className="w-20 h-1 bg-gradient-to-r from-[#FF851B] to-[#06B6D4] mb-4"
+										initial={{ scaleX: 0 }}
+										animate={{ scaleX: 1 }}
+										transition={{
+											duration: 0.6,
+											delay: 0.8,
+										}}
+									/>
+
+									{/* Name with animated reveal */}
+									<div className="overflow-hidden mb-2">
+										<motion.h3
+											className={`text-white text-3xl md:text-4xl font-bold ${
 												isJapanese
 													? 'font-notoSansJP'
-													: ''
+													: 'font-helvetica'
 											}`}
+											initial={{ y: 40 }}
+											animate={{ y: 0 }}
+											transition={{
+												duration: 0.6,
+												delay: 0.7,
+												ease: 'easeOut',
+											}}
 										>
 											{t('hero.founderName')}
-										</p>
-										<p
-											className={`text-[#4F46E5] ${
+										</motion.h3>
+									</div>
+
+									{/* Title with staggered animation */}
+									<div className="overflow-hidden">
+										<motion.p
+											className={`text-[#06B6D4] text-lg md:text-xl ${
 												isJapanese
 													? 'font-zenOldMincho'
 													: ''
 											}`}
+											initial={{ y: 30 }}
+											animate={{ y: 0 }}
+											transition={{
+												duration: 0.6,
+												delay: 0.8,
+												ease: 'easeOut',
+											}}
 										>
 											{t('hero.founderTitle')}
-										</p>
+										</motion.p>
 									</div>
-								</motion.div>
-							</div>
+								</div>
+							</motion.div>
+
+							{/* Optional: Hover effect overlay */}
+							<div className="absolute inset-0 bg-gradient-to-br from-[#FF851B]/0 to-[#06B6D4]/0 hover:from-[#FF851B]/10 hover:to-[#06B6D4]/10 transition-all duration-500 z-15" />
 						</div>
 					</motion.div>
 				</div>

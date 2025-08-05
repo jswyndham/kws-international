@@ -12,13 +12,13 @@ const AboutStory = () => {
 
 	const milestones = [
 		{
-			year: '2015',
+			year: '2012',
 			icon: Globe,
 			titleKey: 'arrivedInJapan',
 			descriptionKey: 'arrivedInJapanDesc',
 		},
 		{
-			year: '2016-2023',
+			year: '2016-2022',
 			icon: Users,
 			titleKey: 'academicResearch',
 			descriptionKey: 'academicResearchDesc',

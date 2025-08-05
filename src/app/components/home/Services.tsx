@@ -81,7 +81,7 @@ const Services = () => {
 	return (
 		<section id="services" className="py-20  bg-[#001F3F]/50">
 			{/* Header with Portfolio-style animation */}
-			<div className="mb-16 pl-8 md:pl-20">
+			<article className="mb-16 pl-8 md:pl-20">
 				{/* Container for the entire animation */}
 				<div className="relative h-[120px] md:h-[100px] flex items-center">
 					{/* Horizontal line - acts as the "ground" */}
@@ -148,9 +148,9 @@ const Services = () => {
 				>
 					{t('subtitle')}
 				</motion.p>
-			</div>
+			</article>
 
-			<div className="max-w-7xl mx-auto px-6">
+			<article className="max-w-7xl mx-auto px-6">
 				{/* Main Services */}
 				<motion.div
 					className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 auto-rows-fr"
@@ -216,7 +216,7 @@ const Services = () => {
 						</motion.div>
 					))}
 				</motion.div>
-			</div>
+			</article>
 		</section>
 	);
 };

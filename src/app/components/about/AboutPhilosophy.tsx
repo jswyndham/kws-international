@@ -39,30 +39,71 @@ const AboutPhilosophy = () => {
 
 	return (
 		<section className="py-20 bg-[#001F3F]/90">
-			<div className="max-w-6xl mx-auto px-6">
-				<motion.div
-					className="text-center mb-16"
+			{/* Header with animation - matching AboutStory component */}
+			<div className="mb-16 pl-8 md:pl-20">
+				<div className="relative h-[120px] md:h-[100px] flex items-center">
+					<motion.div
+						className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/30 z-20"
+						initial={{ scaleX: 0 }}
+						whileInView={{ scaleX: 1 }}
+						viewport={{ once: true }}
+						transition={{ duration: 1, ease: 'easeOut' }}
+					/>
+
+					<div className="absolute bottom-0 left-0 right-0 h-full">
+						<motion.h2
+							className={`absolute text-3xl md:text-6xl lg:text-8xl font-light text-white tracking-wide ${
+								isJapanese
+									? 'font-notoSansJP'
+									: 'font-helvetica'
+							}`}
+							style={{ bottom: '10px' }}
+							initial={{
+								x: 'calc(50vw - 50% - 80px)',
+								y: 120,
+								opacity: 0,
+							}}
+							whileInView={{
+								x: 0,
+								y: 0,
+								opacity: 1,
+							}}
+							viewport={{ once: true, margin: '-50px' }}
+							transition={{
+								duration: 1.2,
+								ease: [0.25, 0.1, 0.25, 1],
+								y: {
+									delay: 0.5,
+									duration: 0.9,
+									ease: 'easeOut',
+								},
+								x: {
+									delay: 1.2,
+									duration: 1.5,
+									ease: 'easeInOut',
+								},
+								opacity: { delay: 0.8, duration: 0.8 },
+							}}
+						>
+							{t('philosophy.title')}
+						</motion.h2>
+					</div>
+				</div>
+
+				<motion.p
+					className={`text-xl text-white/70 max-w-3xl mt-6 ${
+						isJapanese ? 'font-zenOldMincho' : ''
+					}`}
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
-					transition={{ duration: 0.8 }}
+					transition={{ duration: 0.8, delay: 1.5 }}
 				>
-					<h2
-						className={`text-3xl md:text-5xl font-bold text-white mb-6 ${
-							isJapanese ? 'font-notoSansJP' : 'font-anton'
-						}`}
-					>
-						{t('philosophy.title')}
-					</h2>
-					<p
-						className={`text-xl text-white/70 max-w-3xl mx-auto ${
-							isJapanese ? 'font-zenOldMincho' : ''
-						}`}
-					>
-						{t('philosophy.subtitle')}
-					</p>
-				</motion.div>
+					{t('philosophy.subtitle')}
+				</motion.p>
+			</div>
 
+			<div className="max-w-6xl mx-auto px-6">
 				{/* Values Grid */}
 				<div className="grid md:grid-cols-2 gap-8 mb-16">
 					{values.map((value, index) => {

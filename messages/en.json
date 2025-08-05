@@ -83,7 +83,7 @@
 	},
 	"ServicesPage": {
 		"hero": {
-			"title": "TRANSPARENT PRICING & EXCEPTIONAL SERVICE",
+			"title": "PRICING & SERVICE",
 			"subtitle": "Choose the perfect solution for your business with our clear, upfront pricing",
 			"values": {
 				"transparency": "Transparent Pricing",
@@ -92,7 +92,7 @@
 			}
 		},
 		"pricing": {
-			"title": "INVESTMENT OPTIONS",
+			"title": "PRICING PLAN OPTIONS",
 			"subtitle": "All prices include initial consultation, design mockups, and post-launch support",
 			"tabs": {
 				"wordpress": "WordPress Development",
@@ -330,16 +330,16 @@
 	},
 	"AboutMeta": {
 		"title": "About Kyoto Web Studio | British Developer in Japan",
-		"description": "British web developer based in Kyoto, bridging Japanese and global markets. Academic background in technology education, creator of AI-powered Japanese SEO tools.",
-		"keywords": "British web developer Kyoto, Japan web development, bilingual web services, AI SEO tools, James Saunders-Wyndham",
+		"description": "Web developer based in Kyoto, bridging Japanese and global markets. Academic background in technology education, creator of AI-powered Japanese SEO tools.",
+		"keywords": "Web developer Kyoto, Japan web development, bilingual web services, AI SEO tools, James Saunders-Wyndham",
 		"ogImageAlt": "About Kyoto Web Studio - Bridging Cultures Through Technology"
 	},
 	"AboutPage": {
 		"hero": {
 			"title": "BRIDGING CULTURES THROUGH CODE",
-			"subtitle": "From British educator to Kyoto-based web developer, helping businesses connect with Japanese and global audiences",
+			"subtitle": "A Kyoto-based web developer, helping businesses connect with Japanese and global audiences",
 			"badges": {
-				"ukToJapan": "🇬🇧 → 🇯🇵 Journey",
+				"ukToJapan": "🇦🇺 → 🇯🇵 Journey",
 				"academicBackground": "Academic Research",
 				"userFocused": "User-First Development"
 			},
@@ -351,7 +351,7 @@
 			"subtitle": "A unique path from education to web development, driven by a passion for user experience and cultural connection",
 			"milestones": {
 				"arrivedInJapan": "Arrived in Japan",
-				"arrivedInJapanDesc": "Began my journey in Japan, initially in Tokyo before discovering the cultural richness of Kyoto. Previously lived and worked in Vietnam, bringing international perspective to my work.",
+				"arrivedInJapanDesc": "Returned to Kyoto and started my life in the old capital.",
 				"academicResearch": "Academic Research & Teaching",
 				"academicResearchDesc": "Conducted research on computer use in Japanese tertiary education and internet adoption among educators. This academic background provides a unique analytical approach to understanding user behavior and technology adoption.",
 				"romancingJapan": "Founded Romancing Japan",
@@ -450,7 +450,7 @@
 		"ogImageAlt": "Contact Kyoto Web Studio - Professional Web Development Services"
 	},
 	"ServicesMeta": {
-		"title": "Services & Pricing | Kyoto Web Studio - WordPress, React & AI SEO",
+		"title": "Service & Pricing | Kyoto Web Studio - custom websites & SEO",
 		"description": "Transparent pricing for web development services. WordPress from ¥200,000, custom React/Next.js from ¥300,000, AI-powered SEO content from ¥50,000/month.",
 		"keywords": "web development pricing Japan, WordPress cost, React development price, Next.js developer, AI content writing, SEO services pricing, MeCab Japanese SEO",
 		"ogImageAlt": "Kyoto Web Studio Services - WordPress, Custom Development & AI SEO",
@@ -461,5 +461,11 @@
 		"faq2Answer": "Our AI system uses MeCab morphological analysis to create natural, SEO-friendly Japanese content optimized for top-ranking keywords and compound nouns.",
 		"faq3Question": "How long does it take to build a website?",
 		"faq3Answer": "WordPress sites typically take 4-6 weeks, while custom development projects range from 8-12 weeks depending on complexity."
+	},
+	"HomeMeta": {
+		"title": "Kyoto Web Studio - Modern Web Development & SEO in Japan",
+		"description": "Transform your digital presence with cutting-edge web development and SEO expertise from Kyoto. We create smart websites with global SEO, made in Japan.",
+		"keywords": "web development Kyoto, SEO Japan, WordPress development, React development, Next.js, website design Japan, Japanese web studio, bilingual web services",
+		"ogImageAlt": "Kyoto Web Studio - Smart Websites, Global SEO, Made in Japan"
 	}
 }

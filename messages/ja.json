@@ -83,10 +83,10 @@
 	},
 	"ServicesPage": {
 		"hero": {
-			"title": "透明な価格設定と卓越したサービス",
+			"title": "価格設定とサービス",
 			"subtitle": "明確で分かりやすい価格設定で、お客様のビジネスに最適なソリューションをご提供",
 			"values": {
-				"transparency": "透明な価格設定",
+				"transparency": "価格設定",
 				"quality": "高品質",
 				"support": "継続的サポート"
 			}
@@ -112,51 +112,51 @@
 				"wordpress": {
 					"starter": {
 						"name": "スタータープラン",
-						"price": "¥400,000〜",
+						"price": "¥200,000〜",
 						"description": "オンラインビジネスを始める小規模事業者様に最適"
 					},
 					"professional": {
 						"name": "プロフェッショナルプラン",
-						"price": "¥600,000〜",
+						"price": "¥350,000〜",
 						"description": "高度な機能を必要とする成長企業様向け"
 					},
 					"enterprise": {
 						"name": "エンタープライズプラン",
-						"price": "¥1,200,000〜",
+						"price": "¥600,000〜",
 						"description": "大規模な運用に対応する完全ソリューション"
 					}
 				},
 				"custom": {
 					"landingPage": {
 						"name": "ランディングページ",
-						"price": "¥500,000〜",
+						"price": "¥300,000〜",
 						"description": "高コンバージョン率のシングルページアプリケーション"
 					},
 					"webApp": {
 						"name": "ウェブアプリケーション",
-						"price": "¥1,000,000〜",
+						"price": "¥600,000〜",
 						"description": "フル機能のカスタムウェブアプリケーション"
 					},
 					"enterprise": {
 						"name": "エンタープライズソリューション",
-						"price": "¥2,500,000〜",
+						"price": "¥1,200,000〜",
 						"description": "高度なアーキテクチャを持つ複雑なシステム"
 					}
 				},
 				"seo": {
 					"aiContent": {
 						"name": "AIコンテンツライター",
-						"price": "¥100,000/月",
+						"price": "¥50,000/月",
 						"description": "MeCab解析を活用したAI日本語記事生成"
 					},
 					"comprehensive": {
 						"name": "SEO + AIコンテンツ",
-						"price": "¥150,000/月",
+						"price": "¥80,000/月",
 						"description": "AIコンテンツ制作付き総合SEO"
 					},
 					"enterprise": {
 						"name": "エンタープライズSEO",
-						"price": "¥300,000+/月",
+						"price": "¥150,000+/月",
 						"description": "無制限AIコンテンツと完全SEO管理"
 					}
 				}
@@ -329,9 +329,9 @@
 		}
 	},
 	"AboutMeta": {
-		"title": "京都ウェブスタジオについて | 英国人開発者による日本でのウェブ制作",
-		"description": "京都在住の英国人ウェブ開発者。日本とグローバル市場の架け橋。教育工学の学術的背景を持ち、AI搭載日本語SEOツールの開発者。",
-		"keywords": "京都 英国人 ウェブ開発者, 日本 ウェブ制作, バイリンガル ウェブサービス, AI SEOツール, ジェームズ・サンダース・ウィンダム",
+		"title": "京都ウェブスタジオについて | 開発者による日本でのウェブ制作",
+		"description": "京都在住のウェブ開発者。日本とグローバル市場の架け橋。教育工学の学術的背景を持ち、AI搭載日本語SEOツールの開発者。",
+		"keywords": "京都ウェブ開発者, 日本ウェブ制作, バイリンガルウェブサービス, AI SEOツール, ジェームズ・サンダース・ウィンダム",
 		"ogImageAlt": "京都ウェブスタジオについて - テクノロジーで文化をつなぐ"
 	},
 	"AboutPage": {
@@ -339,7 +339,7 @@
 			"title": "コードで文化をつなぐ",
 			"subtitle": "英国の教育者から京都のウェブ開発者へ。日本と世界の架け橋となるビジネスをサポート",
 			"badges": {
-				"ukToJapan": "🇬🇧 → 🇯🇵 の旅",
+				"ukToJapan": "🇦🇺 → 🇯🇵 の旅",
 				"academicBackground": "学術研究の背景",
 				"userFocused": "ユーザーファースト開発"
 			},
@@ -351,7 +351,7 @@
 			"subtitle": "ユーザー体験と文化的つながりへの情熱に導かれた、教育からウェブ開発への独自の道のり",
 			"milestones": {
 				"arrivedInJapan": "日本到着",
-				"arrivedInJapanDesc": "東京での生活を経て、京都の文化的豊かさに魅了され移住。以前はベトナムでの生活・勤務経験もあり、国際的な視点を仕事に活かしています。",
+				"arrivedInJapanDesc": "京都に戻り、古都での生活を始めました。",
 				"academicResearch": "学術研究と教育",
 				"academicResearchDesc": "日本の高等教育におけるコンピュータ利用と教育者のインターネット活用について研究。この学術的背景により、ユーザー行動と技術導入を理解する独自の分析的アプローチを確立。",
 				"romancingJapan": "Romancing Japan設立",
@@ -451,7 +451,7 @@
 	},
 	"ServicesMeta": {
 		"title": "サービス・料金 | 京都ウェブスタジオ - WordPress・React・AI SEO",
-		"description": "透明な料金設定のウェブ開発サービス。WordPress 20万円〜、カスタムReact/Next.js 30万円〜、AI搭載SEOコンテンツ 月額5万円〜。",
+		"description": "料金設定のウェブ開発サービス。WordPress 20万円〜、カスタムReact/Next.js 30万円〜、AI搭載SEOコンテンツ 月額5万円〜。",
 		"keywords": "ウェブ制作 料金 日本, WordPress 費用, React開発 価格, Next.js開発者, AI記事作成, SEOサービス 料金, MeCab 日本語SEO",
 		"ogImageAlt": "京都ウェブスタジオ サービス - WordPress、カスタム開発、AI SEO",
 		"servicesTitle": "ウェブ開発・SEOサービス",
@@ -461,5 +461,11 @@
 		"faq2Answer": "当社のAIシステムは、MeCab形態素解析を使用して、上位ランキングキーワードと複合名詞に最適化された自然でSEOフレンドリーな日本語コンテンツを作成します。",
 		"faq3Question": "ウェブサイト構築にはどのくらい時間がかかりますか？",
 		"faq3Answer": "WordPressサイトは通常4〜6週間、カスタム開発プロジェクトは複雑さに応じて8〜12週間かかります。"
+	},
+	"HomeMeta": {
+		"title": "京都ウェブスタジオ - 最先端のウェブ開発とSEO",
+		"description": "京都から最先端のウェブ開発とSEOの専門知識でデジタルプレゼンスを変革します。グローバルSEOを備えたスマートウェブサイトを日本で制作。",
+		"keywords": "ウェブ開発 京都, SEO 日本, WordPress開発, React開発, Next.js, ウェブサイトデザイン 日本, 日本のウェブスタジオ, バイリンガルウェブサービス",
+		"ogImageAlt": "京都ウェブスタジオ - スマートウェブサイト、グローバルSEO、日本製"
 	}
 }
