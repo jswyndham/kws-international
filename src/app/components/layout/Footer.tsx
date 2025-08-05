@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
+import { MapPin, Github, Linkedin, Twitter } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '../../../i18n/routing';
@@ -111,27 +111,19 @@ const Footer = () => {
 								<MapPin className="w-4 h-4 mr-2 text-[#06B6D4]" />
 								{t('contactInfo.location')}
 							</li>
-							<li className="flex items-center text-white/60">
-								<Mail className="w-4 h-4 mr-2 text-[#06B6D4]" />
-								{t('contactInfo.email')}
-							</li>
-							<li className="flex items-center text-white/60">
-								<Phone className="w-4 h-4 mr-2 text-[#06B6D4]" />
-								{t('contactInfo.phone')}
-							</li>
 						</ul>
 						<div className="flex space-x-4 mt-6">
-							<a
-								href="https://github.com"
+							<Link
+								href="https://github.com/jswyndham"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-white/60 hover:text-[#06B6D4] transition-colors"
 								aria-label="GitHub"
 							>
 								<Github className="w-5 h-5" />
-							</a>
+							</Link>
 							<a
-								href="https://linkedin.com"
+								href="https://www.linkedin.com/in/james-saunders-wyndham-b6015599/"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-white/60 hover:text-[#06B6D4] transition-colors"

@@ -96,7 +96,7 @@ const Services = () => {
 					{/* Mask container - hides everything below the line */}
 					<div className="absolute bottom-0 left-0 right-0 h-full">
 						<motion.h2
-							className={`absolute pr-4 text-3xl md:text-6xl font-light text-white tracking-wide ${
+							className={`absolute pr-4 text-3xl md:text-6xl lg:text-8xl font-light text-white tracking-wide ${
 								isJapanese
 									? 'font-notoSansJP'
 									: 'font-helvetica'

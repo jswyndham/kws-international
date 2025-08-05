@@ -11,6 +11,8 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { routing } from '../../i18n/routing';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
 
 const openSans = Open_Sans({
 	subsets: ['latin'],
@@ -189,7 +191,9 @@ export default async function LocaleLayout({
 		>
 			<body className={`${openSans.className} antialiased`}>
 				<NextIntlClientProvider messages={messages}>
+					<Header />
 					{children}
+					<Footer />
 				</NextIntlClientProvider>
 			</body>
 		</html>

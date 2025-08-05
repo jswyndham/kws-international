@@ -66,20 +66,14 @@ const Header = () => {
 	};
 
 	const navItems = [
-		{ href: '#services', label: 'services' },
-		{ href: '#about', label: 'about' },
-		{ href: '#contact', label: 'contact' },
+		{ href: '/', label: 'home' },
+		{ href: '/services', label: 'services' },
+		{ href: '/about', label: 'about' },
+		{ href: '/contact', label: 'contact' },
 	];
 
-	const handleNavClick = (href: string) => {
+	const handleNavClick = () => {
 		setIsMenuOpen(false);
-		// Small delay to allow menu to close before scrolling
-		setTimeout(() => {
-			const element = document.querySelector(href);
-			if (element) {
-				element.scrollIntoView({ behavior: 'smooth' });
-			}
-		}, 300);
 	};
 
 	// Mobile menu overlay variants
@@ -186,13 +180,13 @@ const Header = () => {
 							<ul className="flex space-x-8 mt-12">
 								{navItems.map((item) => (
 									<li key={item.label}>
-										<a
+										<Link
 											href={item.href}
 											className="text-white font-semibold hover:text-[#06B6D4] transition-colors relative group"
 										>
 											{t(item.label)}
 											<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF851B] transition-all group-hover:w-full"></span>
-										</a>
+										</Link>
 									</li>
 								))}
 							</ul>
@@ -298,10 +292,9 @@ const Header = () => {
 											variants={menuItemVariants}
 											custom={index}
 										>
-											<button
-												onClick={() =>
-													handleNavClick(item.href)
-												}
+											<Link
+												href={item.href}
+												onClick={handleNavClick}
 												className={`block w-full text-left py-4 text-2xl font-semibold text-white hover:text-[#06B6D4] transition-colors relative group ${
 													isJapanese
 														? 'font-notoSansJP'
@@ -319,7 +312,7 @@ const Header = () => {
 														duration: 0.3,
 													}}
 												/>
-											</button>
+											</Link>
 										</motion.div>
 									))}
 								</motion.nav>

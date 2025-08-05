@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useRef } from 'react';
-import Image from 'next/image';
-import { motion, useScroll, useTransform, useInView } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { ArrowUpRight, Code2, Palette, Search, Smartphone } from 'lucide-react';
+import ProjectCard from '../ui/ProjectCard';
 
 const Portfolio = () => {
 	const t = useTranslations('Portfolio');
@@ -110,7 +110,7 @@ const Portfolio = () => {
 					{/* Mask container - hides everything below the line */}
 					<div className="absolute bottom-0 left-0 right-0 h-full">
 						<motion.h2
-							className={`absolute text-3xl md:text-6xl font-light text-white tracking-wide ${
+							className={`absolute text-3xl md:text-6xl lg:text-8xl font-light text-white tracking-wide ${
 								isJapanese
 									? 'font-zenOldMincho'
 									: 'font-helvetica'
@@ -204,155 +204,6 @@ const Portfolio = () => {
 				</Link>
 			</motion.div>
 		</section>
-	);
-};
-
-const ProjectCard = ({
-	project,
-	index,
-	isJapanese,
-}: {
-	project: any;
-	index: number;
-	isJapanese: boolean;
-}) => {
-	const cardRef = useRef(null);
-	const isInView = useInView(cardRef, { once: true, margin: '-100px' });
-	const isEven = index % 2 === 0;
-
-	return (
-		<motion.div
-			ref={cardRef}
-			className={`grid lg:grid-cols-2 gap-12 items-center ${
-				isEven ? '' : 'lg:flex-row-reverse'
-			}`}
-			initial={{ opacity: 0, y: 50 }}
-			animate={isInView ? { opacity: 1, y: 0 } : {}}
-			transition={{ duration: 0.8, ease: 'easeOut' }}
-		>
-			{/* Image Section */}
-			<motion.div
-				className={`relative group ${isEven ? '' : 'lg:order-2'}`}
-				whileHover={{ scale: 1.02 }}
-				transition={{ duration: 0.3 }}
-			>
-				<a
-					href={project.url}
-					target="_blank"
-					rel="noopener noreferrer"
-					className="block relative overflow-hidden rounded-2xl shadow-2xl"
-				>
-					{/* Color overlay on hover */}
-					<div
-						className={`absolute inset-0 bg-gradient-to-br from-${project.color}/0 to-${project.color}/20 group-hover:from-${project.color}/20 group-hover:to-${project.color}/40 transition-all duration-500 z-10`}
-					/>
-
-					<Image
-						src={project.image}
-						alt={project.title}
-						width={800}
-						height={600}
-						className="w-full h-auto transform group-hover:scale-105 transition-transform duration-700"
-					/>
-
-					{/* Logo overlay */}
-					<div className="absolute top-8 left-8 z-20">
-						<motion.div
-							className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg"
-							whileHover={{ scale: 1.1 }}
-						>
-							<Image
-								src={project.logo}
-								alt={`${project.title} logo`}
-								width={80}
-								height={80}
-								className="w-full h-full object-contain"
-							/>
-						</motion.div>
-					</div>
-				</a>
-			</motion.div>
-
-			{/* Content Section */}
-			<div className={`space-y-8 ${isEven ? '' : 'lg:order-1'}`}>
-				<motion.div
-					initial={{ opacity: 0, x: isEven ? -30 : 30 }}
-					animate={isInView ? { opacity: 1, x: 0 } : {}}
-					transition={{ duration: 0.8, delay: 0.2 }}
-				>
-					<h3
-						className={`text-4xl md:text-5xl font-bold text-white mb-4 ${
-							isJapanese ? 'font-zenOldMincho' : 'font-anton'
-						}`}
-					>
-						{project.title}
-					</h3>
-
-					{/* Tech Stack - Minimal pills */}
-					<div className="flex flex-wrap gap-2 mb-8">
-						{project.techStack.map((tech: string) => (
-							<span
-								key={tech}
-								className="px-3 py-1 text-sm bg-white/10 backdrop-blur-sm text-white/80 rounded-full border border-white/20"
-							>
-								{tech}
-							</span>
-						))}
-					</div>
-				</motion.div>
-
-				{/* Highlights with icons */}
-				<motion.div
-					className="space-y-4"
-					initial={{ opacity: 0, y: 20 }}
-					animate={isInView ? { opacity: 1, y: 0 } : {}}
-					transition={{ duration: 0.8, delay: 0.4 }}
-				>
-					{project.highlights.map((highlight: any, idx: number) => (
-						<motion.div
-							key={idx}
-							className="flex items-start gap-4"
-							initial={{ opacity: 0, x: -20 }}
-							animate={isInView ? { opacity: 1, x: 0 } : {}}
-							transition={{
-								duration: 0.6,
-								delay: 0.5 + idx * 0.1,
-							}}
-						>
-							<div className="flex-shrink-0 w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center">
-								<highlight.icon className="w-5 h-5 text-[#06B6D4]" />
-							</div>
-							<p
-								className={`text-white/70 leading-relaxed ${
-									isJapanese ? 'font-notoSansJP' : ''
-								}`}
-							>
-								{highlight.text}
-							</p>
-						</motion.div>
-					))}
-				</motion.div>
-
-				{/* View Project Link */}
-				<motion.div
-					initial={{ opacity: 0 }}
-					animate={isInView ? { opacity: 1 } : {}}
-					transition={{ duration: 0.8, delay: 0.7 }}
-				>
-					<a
-						href={project.url}
-						target="_blank"
-						rel="noopener noreferrer"
-						className={`inline-flex items-center gap-2 text-lg font-semibold text-[#06B6D4] hover:text-[#FF851B] transition-colors group ${
-							isJapanese ? 'font-notoSansJP' : ''
-						}`}
-					>
-						View Live Site
-						<ArrowUpRight className="w-5 h-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-					</a>
-				</motion.div>
-			</div>
-		</motion.div>
 	);
 };
 

@@ -1,7 +1,7 @@
 {
 	"Header": {
+		"home": "Home",
 		"services": "Services",
-		"portfolio": "Portfolio",
 		"about": "About",
 		"contact": "Contact"
 	},
@@ -32,7 +32,7 @@
 		"noruPoint3": "Modern tech stack ensuring scalability and performance"
 	},
 	"Services": {
-		"title": "SERVICES THAT DRIVE RESULTS",
+		"title": "SERVICES AVAILABLE",
 		"subtitle": "From concept to launch, we deliver comprehensive web solutions tailored to your business needs.",
 		"wordpress": {
 			"title": "WordPress & Elementor Development",
@@ -81,6 +81,343 @@
 			"description": "Streamline with n8n workflows"
 		}
 	},
+	"ServicesPage": {
+		"hero": {
+			"title": "TRANSPARENT PRICING & EXCEPTIONAL SERVICE",
+			"subtitle": "Choose the perfect solution for your business with our clear, upfront pricing",
+			"values": {
+				"transparency": "Transparent Pricing",
+				"quality": "Premium Quality",
+				"support": "Ongoing Support"
+			}
+		},
+		"pricing": {
+			"title": "INVESTMENT OPTIONS",
+			"subtitle": "All prices include initial consultation, design mockups, and post-launch support",
+			"tabs": {
+				"wordpress": "WordPress Development",
+				"custom": "Custom Development",
+				"seo": "SEO Services"
+			},
+			"popular": "MOST POPULAR",
+			"cta": "Get Started",
+			"additionalServices": "Need something extra? We also offer:",
+			"additional": {
+				"maintenance": "Monthly Maintenance",
+				"hosting": "Premium Hosting",
+				"content": "Content Creation",
+				"automation": "Workflow Automation"
+			},
+			"packages": {
+				"wordpress": {
+					"starter": {
+						"name": "Starter Package",
+						"price": "¥200,000〜",
+						"description": "Perfect for small businesses starting their online journey"
+					},
+					"professional": {
+						"name": "Professional Package",
+						"price": "¥350,000〜",
+						"description": "Ideal for growing businesses needing advanced features"
+					},
+					"enterprise": {
+						"name": "Enterprise Package",
+						"price": "¥600,000〜",
+						"description": "Complete solution for large-scale operations"
+					}
+				},
+				"custom": {
+					"landingPage": {
+						"name": "Landing Page",
+						"price": "¥300,000〜",
+						"description": "High-converting single page applications"
+					},
+					"webApp": {
+						"name": "Web Application",
+						"price": "¥600,000〜",
+						"description": "Full-featured custom web applications"
+					},
+					"enterprise": {
+						"name": "Enterprise Solution",
+						"price": "¥1,200,000〜",
+						"description": "Complex systems with advanced architecture"
+					}
+				},
+				"seo": {
+					"aiContent": {
+						"name": "AI Content Writer",
+						"price": "¥50,000/month",
+						"description": "AI-powered Japanese article generation with MeCab analysis"
+					},
+					"comprehensive": {
+						"name": "SEO + AI Content",
+						"price": "¥80,000/month",
+						"description": "Complete SEO with AI content creation"
+					},
+					"enterprise": {
+						"name": "Enterprise SEO",
+						"price": "¥150,000+/month",
+						"description": "Unlimited AI content with full SEO management"
+					}
+				}
+			},
+			"features": {
+				"pages5to10": "5-10 professionally designed pages",
+				"pages10to20": "10-20 custom designed pages",
+				"pagesUnlimited": "Unlimited pages with CMS",
+				"responsiveDesign": "Mobile-responsive design",
+				"customDesign": "Unique custom design",
+				"basicSEO": "Basic SEO setup",
+				"advancedSEO": "Advanced SEO optimization",
+				"contactForm": "Contact form integration",
+				"blog": "Blog functionality",
+				"analytics": "Analytics integration",
+				"revisions2": "2 rounds of revisions",
+				"revisions3": "3 rounds of revisions",
+				"revisionsUnlimited": "Unlimited revisions",
+				"delivery4weeks": "4-week delivery",
+				"delivery6weeks": "6-week delivery",
+				"delivery3weeks": "3-week delivery",
+				"delivery8weeks": "8-week delivery",
+				"ecommerce": "E-commerce functionality",
+				"membershipSystem": "Membership system",
+				"multilingual": "Multi-language support",
+				"customFeatures": "Custom feature development",
+				"prioritySupport": "Priority support",
+				"singlePage": "Single page application",
+				"reactNextjs": "React/Next.js development",
+				"animations": "Advanced animations",
+				"apiIntegration": "API integrations",
+				"performanceOptimized": "Performance optimized",
+				"fullApplication": "Full web application",
+				"userAuth": "User authentication",
+				"database": "Database integration",
+				"adminPanel": "Admin dashboard",
+				"realtime": "Real-time features",
+				"testing": "Comprehensive testing",
+				"complexSystem": "Complex system architecture",
+				"microservices": "Microservices architecture",
+				"cloudDeployment": "Cloud deployment",
+				"cicd": "CI/CD pipeline",
+				"security": "Advanced security",
+				"sla": "SLA guarantee",
+				"dedicatedTeam": "Dedicated team",
+				"aiArticles": "AI-powered Japanese article writing",
+				"mecabAnalysis": "MeCab linguistic analysis for natural Japanese",
+				"keywordOptimization": "Top-ranking keyword optimization",
+				"compoundNounTargeting": "Japanese compound noun targeting",
+				"monthlyArticles4": "4 AI-generated articles per month",
+				"monthlyArticles8": "8 AI-generated articles per month",
+				"unlimitedAiArticles": "Unlimited AI article generation",
+				"customAiTraining": "Custom AI model training for your industry",
+				"multilingualContent": "Japanese & English content creation",
+				"seoRankTracking": "SEO ranking tracking & reporting",
+				"dedicatedManager": "Dedicated account manager",
+				"weeklyReports": "Weekly performance reports",
+				"technicalSEO": "Technical SEO optimization",
+				"fullSeoStrategy": "Comprehensive SEO strategy",
+				"contentCalendar": "Content calendar",
+				"technicalImplementation": "Technical implementation",
+				"localSEO": "Local SEO",
+				"internationalSEO": "International SEO",
+				"training": "Team training",
+				"quarterlyReviews": "Quarterly reviews"
+			}
+		},
+		"comparison": {
+			"title": "WordPress vs Custom Development",
+			"subtitle": "Choose the right solution for your business needs",
+			"feature": "Feature",
+			"custom": "Custom Development",
+			"note": "Both solutions can be excellent choices. The best option depends on your specific business needs, budget, and long-term goals.",
+			"features": {
+				"initialCost": "Initial Investment",
+				"developmentTime": "Development Time",
+				"customization": "Customization Level",
+				"performance": "Performance",
+				"scalability": "Scalability",
+				"maintenance": "Maintenance Needs",
+				"seoCapability": "SEO Capability",
+				"ecommerce": "E-commerce Ready",
+				"multilingual": "Multi-language Support",
+				"idealFor": "Ideal For"
+			},
+			"values": {
+				"low": "Lower",
+				"high": "Higher",
+				"limited": "Limited",
+				"unlimited": "Unlimited",
+				"good": "Good",
+				"excellent": "Excellent",
+				"moderate": "Moderate",
+				"regular": "Regular Updates",
+				"minimal": "Minimal",
+				"4-6 weeks": "4-6 weeks",
+				"8-12 weeks": "8-12 weeks",
+				"smb": "Small to Medium Business",
+				"enterprise": "Growing & Enterprise"
+			}
+		},
+		"faq": {
+			"title": "Frequently Asked Questions",
+			"subtitle": "Get answers to common questions about our services",
+			"items": {
+				"wordpressVsCustom": "Should I choose WordPress or custom development?",
+				"wordpressVsCustomAnswer": "WordPress is ideal for businesses that need a professional website quickly and cost-effectively, with content management capabilities. Custom development is better for unique functionality, superior performance, or when you need complete control over every aspect of your site.",
+				"aiContent": "What is your AI-powered Japanese content writing service?",
+				"aiContentAnswer": "Our proprietary AI system uses MeCab morphological analysis to understand Japanese language structure, identify compound nouns, and optimize for top-ranking keywords. This ensures natural, SEO-friendly Japanese content that resonates with native speakers while improving search rankings. Each article is tailored to your industry and target keywords.",
+				"timeline": "How long does it take to build a website?",
+				"timelineAnswer": "WordPress sites typically take 4-6 weeks, while custom development projects range from 8-12 weeks depending on complexity. We'll provide a detailed timeline during our initial consultation.",
+				"pricing": "Why are prices shown as ranges?",
+				"pricingAnswer": "Every project is unique. Our pricing ranges reflect the variety of features, pages, and complexity levels. We'll provide a fixed quote after understanding your specific requirements.",
+				"maintenance": "Do I need ongoing maintenance?",
+				"maintenanceAnswer": "Yes, we recommend regular maintenance to keep your site secure, fast, and up-to-date. We offer monthly maintenance packages starting from ¥10,000/month.",
+				"seo": "Is SEO included in web development?",
+				"seoAnswer": "Basic on-page SEO setup is included in all our web development packages. For comprehensive SEO strategies and ongoing optimization, we offer dedicated SEO services.",
+				"multilingual": "Can you build multilingual websites?",
+				"multilingualAnswer": "Yes! We specialize in Japanese-English bilingual sites and can implement additional languages as needed. This is especially valuable for businesses targeting international markets.",
+				"hosting": "Do you provide hosting?",
+				"hostingAnswer": "Yes, we offer premium hosting solutions optimized for performance and security. We can also work with your existing hosting provider if preferred.",
+				"payment": "What are your payment terms?",
+				"paymentAnswer": "We typically require 50% upfront and 50% upon project completion. For larger projects, we can arrange monthly payment plans. All prices exclude consumption tax."
+			}
+		},
+		"cta": {
+			"title": "Ready to Transform Your Digital Presence?",
+			"subtitle": "Let's discuss how we can help your business grow online",
+			"consultation": "Schedule Free Consultation",
+			"portfolio": "View Our Work",
+			"availability": "Usually responds within 24 hours"
+		}
+	},
+	"Contact": {
+		"title": "GET IN TOUCH",
+		"subtitle": "Let's discuss how we can transform your digital presence and drive your business forward.",
+		"email": "Email",
+		"phone": "Phone",
+		"location": "Location",
+		"address": "Kyoto, Japan",
+		"workingHours": "Working Hours",
+		"weekdays": "Monday - Friday: 9:00 AM - 6:00 PM JST",
+		"weekends": "Saturday - Sunday: Closed",
+		"form": {
+			"name": "Name",
+			"namePlaceholder": "John Doe",
+			"email": "Email",
+			"emailPlaceholder": "john@example.com",
+			"company": "Company",
+			"companyPlaceholder": "Your Company Name",
+			"projectType": "Project Type",
+			"selectProject": "Select a project type",
+			"wordpress": "WordPress Development",
+			"react": "React/Next.js Development",
+			"seo": "SEO Optimization",
+			"maintenance": "Website Maintenance",
+			"other": "Other",
+			"budget": "Budget Range",
+			"selectBudget": "Select your budget range",
+			"budget1": "Less than ¥500,000",
+			"budget2": "¥500,000 - ¥1,000,000",
+			"budget3": "¥1,000,000 - ¥2,000,000",
+			"budget4": "More than ¥2,000,000",
+			"message": "Message",
+			"messagePlaceholder": "Tell us about your project...",
+			"submit": "Send Message",
+			"submitting": "Sending...",
+			"success": "Message sent successfully!",
+			"error": "Something went wrong. Please try again."
+		}
+	},
+	"AboutMeta": {
+		"title": "About Kyoto Web Studio | British Developer in Japan",
+		"description": "British web developer based in Kyoto, bridging Japanese and global markets. Academic background in technology education, creator of AI-powered Japanese SEO tools.",
+		"keywords": "British web developer Kyoto, Japan web development, bilingual web services, AI SEO tools, James Saunders-Wyndham",
+		"ogImageAlt": "About Kyoto Web Studio - Bridging Cultures Through Technology"
+	},
+	"AboutPage": {
+		"hero": {
+			"title": "BRIDGING CULTURES THROUGH CODE",
+			"subtitle": "From British educator to Kyoto-based web developer, helping businesses connect with Japanese and global audiences",
+			"badges": {
+				"ukToJapan": "🇬🇧 → 🇯🇵 Journey",
+				"academicBackground": "Academic Research",
+				"userFocused": "User-First Development"
+			},
+			"founderName": "James Saunders-Wyndham",
+			"founderTitle": "Founder / Web Developer"
+		},
+		"story": {
+			"title": "THE JOURNEY",
+			"subtitle": "A unique path from education to web development, driven by a passion for user experience and cultural connection",
+			"milestones": {
+				"arrivedInJapan": "Arrived in Japan",
+				"arrivedInJapanDesc": "Began my journey in Japan, initially in Tokyo before discovering the cultural richness of Kyoto. Previously lived and worked in Vietnam, bringing international perspective to my work.",
+				"academicResearch": "Academic Research & Teaching",
+				"academicResearchDesc": "Conducted research on computer use in Japanese tertiary education and internet adoption among educators. This academic background provides a unique analytical approach to understanding user behavior and technology adoption.",
+				"romancingJapan": "Founded Romancing Japan",
+				"romancingJapanDesc": "Launched a successful travel blog focused on Japanese culture, travel, and accommodations. Through hands-on SEO optimization and user experience improvements, grew the site to attract visitors from around the world.",
+				"kyotoWebStudio": "Established Kyoto Web Studio",
+				"kyotoWebStudioDesc": "Combined technical skills, cultural understanding, and SEO expertise to help businesses succeed online. Developed proprietary AI tools for Japanese content creation that truly understand the language's unique structure."
+			},
+			"skills": {
+				"bilingualAdvantage": {
+					"title": "Bilingual Advantage",
+					"description": "Native English speaker with Japanese language skills, enabling seamless communication and culturally appropriate web solutions for both markets."
+				},
+				"academicApproach": {
+					"title": "Research-Driven Development",
+					"description": "Academic background ensures a methodical, data-driven approach to web development and user experience optimization."
+				},
+				"localKnowledge": {
+					"title": "Deep Cultural Understanding",
+					"description": "Years of living in Kyoto provide authentic insights into Japanese business culture and user expectations."
+				}
+			}
+		},
+		"philosophy": {
+			"title": "MY PHILOSOPHY",
+			"subtitle": "Every website should captivate visitors and convert them into customers",
+			"values": {
+				"userEngagement": "Keep Users Engaged",
+				"userEngagementDesc": "I believe the first impression is everything. My designs capture attention immediately and guide users naturally through your content, reducing bounce rates and increasing engagement.",
+				"timeOnPage": "Maximize Time on Page",
+				"timeOnPageDesc": "Through strategic content placement, intuitive navigation, and compelling design, I create experiences that keep visitors exploring and discovering value in your offerings.",
+				"conversionFocus": "Convert Visitors to Customers",
+				"conversionFocusDesc": "Every element is designed with conversion in mind. From clear calls-to-action to trust-building content, I help turn your website traffic into real business results.",
+				"culturalBridge": "Bridge Cultural Gaps",
+				"culturalBridgeDesc": "My unique position as a British developer in Japan allows me to create websites that resonate with both Japanese and international audiences, opening new markets for your business."
+			},
+			"innovation": {
+				"title": "Innovating Japanese SEO",
+				"description": "I've developed cutting-edge AI tools that understand Japanese language morphology, creating content that ranks well while maintaining natural, engaging prose that connects with readers.",
+				"tagline": "Technology with a Human Touch"
+			}
+		},
+		"cta": {
+			"title": "Let's Create Something Amazing Together",
+			"subtitle": "Ready to transform your online presence with a developer who understands both technology and culture?",
+			"startProject": "Start Your Project",
+			"viewServices": "View Services",
+			"stats": {
+				"bilingualService": {
+					"value": "100%",
+					"label": "Bilingual Service"
+				},
+				"kyotoBased": {
+					"value": "Kyoto",
+					"label": "Based"
+				},
+				"userFocused": {
+					"value": "UX",
+					"label": "First"
+				},
+				"aiPowered": {
+					"value": "AI",
+					"label": "Enhanced"
+				}
+			}
+		}
+	},
 	"Footer": {
 		"companyName": "Kyoto Web Studio",
 		"tagline": "Smart Websites. Global SEO. Made in Japan.",
@@ -105,5 +442,24 @@
 			"phone": "+81 XXX-XXXX-XXXX"
 		},
 		"copyright": "© 2025 Kyoto Web Studio. All rights reserved. | Crafted with ❤️ in Kyoto"
+	},
+	"ContactMeta": {
+		"title": "Contact Kyoto Web Studio | Web Development & SEO Services",
+		"description": "Contact Kyoto Web Studio for professional WordPress development, custom React/Next.js applications, and AI-powered SEO content. Free consultation available.",
+		"keywords": "contact web developer Kyoto, Japan web design agency, WordPress developer, React developer, SEO services Japan, AI content writing",
+		"ogImageAlt": "Contact Kyoto Web Studio - Professional Web Development Services"
+	},
+	"ServicesMeta": {
+		"title": "Services & Pricing | Kyoto Web Studio - WordPress, React & AI SEO",
+		"description": "Transparent pricing for web development services. WordPress from ¥200,000, custom React/Next.js from ¥300,000, AI-powered SEO content from ¥50,000/month.",
+		"keywords": "web development pricing Japan, WordPress cost, React development price, Next.js developer, AI content writing, SEO services pricing, MeCab Japanese SEO",
+		"ogImageAlt": "Kyoto Web Studio Services - WordPress, Custom Development & AI SEO",
+		"servicesTitle": "Web Development and SEO Services",
+		"faq1Question": "Should I choose WordPress or custom development?",
+		"faq1Answer": "WordPress is ideal for businesses that need a professional website quickly and cost-effectively. Custom development is better for unique functionality or superior performance.",
+		"faq2Question": "What is your AI-powered Japanese content writing service?",
+		"faq2Answer": "Our AI system uses MeCab morphological analysis to create natural, SEO-friendly Japanese content optimized for top-ranking keywords and compound nouns.",
+		"faq3Question": "How long does it take to build a website?",
+		"faq3Answer": "WordPress sites typically take 4-6 weeks, while custom development projects range from 8-12 weeks depending on complexity."
 	}
 }
