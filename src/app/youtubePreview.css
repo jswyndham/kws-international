@@ -1,0 +1,9 @@
+.youtubePreviewContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px; /* Equivalent to 3 in your Flex component */
+}
+
+/* .youtubePreviewText {
+	/* Add any additional styling for the text here */

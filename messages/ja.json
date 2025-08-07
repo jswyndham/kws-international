@@ -3,6 +3,7 @@
 		"home": "ホームページ",
 		"services": "サービス",
 		"about": "会社概要",
+		"blog": "記事",
 		"contact": "お問い合わせ"
 	},
 	"Hero": {
@@ -329,7 +330,7 @@
 		}
 	},
 	"AboutMeta": {
-		"title": "京都ウェブスタジオについて | 開発者による日本でのウェブ制作",
+		"title": "京都ウェブスタジオについて",
 		"description": "京都在住のウェブ開発者。日本とグローバル市場の架け橋。教育工学の学術的背景を持ち、AI搭載日本語SEOツールの開発者。",
 		"keywords": "京都ウェブ開発者, 日本ウェブ制作, バイリンガルウェブサービス, AI SEOツール, ジェームズ・サンダース・ウィンダム",
 		"ogImageAlt": "京都ウェブスタジオについて - テクノロジーで文化をつなぐ"
@@ -465,5 +466,46 @@
 		"description": "京都から最先端のウェブ開発とSEOの専門知識でデジタルプレゼンスを変革します。グローバルSEOを備えたスマートウェブサイトを日本で制作。",
 		"keywords": "ウェブ開発 京都, SEO 日本, WordPress開発, React開発, Next.js, ウェブサイトデザイン 日本, 日本のウェブスタジオ, バイリンガルウェブサービス",
 		"ogImageAlt": "京都ウェブスタジオ - スマートウェブサイト、グローバルSEO、日本製"
+	},
+	"BlogMeta": {
+		"title": "記事 - ウェブ開発・SEO情報 | 京都ウェブスタジオ",
+		"description": "ウェブ開発、SEO戦略、デジタルトランスフォーメーションに関する専門的な情報をお届けします。日本でのウェブサイト構築の経験から学ぶ。",
+		"keywords": "ウェブ開発, SEO対策, Next.js, WordPress, 日本のウェブデザイン, 京都, 技術記事",
+		"ogImageAlt": "京都ウェブスタジオ 記事"
+	},
+	"Blog": {
+		"heroTitle": "記事",
+		"heroSubtitle": "ウェブ開発、SEO、デジタルトランスフォーメーションに関する専門知識と洞察",
+		"backToBlog": "記事一覧に戻る",
+		"minRead": "分で読める",
+		"relatedPosts": "関連記事",
+		"searchPlaceholder": "記事を検索...",
+		"searchButton": "検索",
+		"categoriesTitle": "カテゴリー",
+		"tagsTitle": "タグ",
+		"allCategories": "すべての記事",
+		"popularPosts": "人気記事",
+		"searchResults": "「{{term}}」の検索結果：{{count}}件の記事",
+		"categoryResults": "{{category}}：{{count}}件の記事",
+		"tagResults": "#{{tag}}：{{count}}件の記事",
+		"totalPosts": "{{count}}件の記事",
+		"clearFilters": "フィルターをクリア",
+		"noPosts": "記事が見つかりません",
+		"noPostsDescription": "検索条件を変更するか、すべての記事を表示してください。",
+		"readMore": "続きを読む",
+		"publishedOn": "公開日",
+		"updatedOn": "最終更新日",
+		"shareArticle": "この記事をシェア",
+		"tableOfContents": "目次",
+		"copyLink": "リンクをコピー",
+		"copiedLink": "リンクをコピーしました！",
+		"newsletter": {
+			"title": "最新情報をお届け",
+			"description": "ウェブ開発とSEOに関する最新の情報をメールでお届けします。",
+			"placeholder": "メールアドレスを入力",
+			"button": "登録する",
+			"success": "ご登録ありがとうございます！",
+			"error": "エラーが発生しました。もう一度お試しください。"
+		}
 	}
 }

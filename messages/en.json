@@ -3,6 +3,7 @@
 		"home": "Home",
 		"services": "Services",
 		"about": "About",
+		"blog": "Blog",
 		"contact": "Contact"
 	},
 	"Hero": {
@@ -329,7 +330,7 @@
 		}
 	},
 	"AboutMeta": {
-		"title": "About Kyoto Web Studio | British Developer in Japan",
+		"title": "Kyoto Web Studio - About Us",
 		"description": "Web developer based in Kyoto, bridging Japanese and global markets. Academic background in technology education, creator of AI-powered Japanese SEO tools.",
 		"keywords": "Web developer Kyoto, Japan web development, bilingual web services, AI SEO tools, James Saunders-Wyndham",
 		"ogImageAlt": "About Kyoto Web Studio - Bridging Cultures Through Technology"
@@ -467,5 +468,46 @@
 		"description": "Transform your digital presence with cutting-edge web development and SEO expertise from Kyoto. We create smart websites with global SEO, made in Japan.",
 		"keywords": "web development Kyoto, SEO Japan, WordPress development, React development, Next.js, website design Japan, Japanese web studio, bilingual web services",
 		"ogImageAlt": "Kyoto Web Studio - Smart Websites, Global SEO, Made in Japan"
+	},
+	"BlogMeta": {
+		"title": "Blog - Web Development & SEO Insights | Kyoto Web Studio",
+		"description": "Expert insights on web development, SEO strategies, and digital transformation. Learn from our experiences building successful websites in Japan.",
+		"keywords": "web development blog, SEO tips, Next.js tutorials, WordPress guides, Japanese web design, Kyoto tech blog",
+		"ogImageAlt": "Kyoto Web Studio Blog"
+	},
+	"Blog": {
+		"heroTitle": "Blog",
+		"heroSubtitle": "Insights and expertise in web development, SEO, and digital transformation",
+		"backToBlog": "Back to Blog",
+		"minRead": "min read",
+		"relatedPosts": "Related Articles",
+		"searchPlaceholder": "Search articles...",
+		"searchButton": "Search",
+		"categoriesTitle": "Categories",
+		"tagsTitle": "Tags",
+		"allCategories": "All Articles",
+		"popularPosts": "Popular Articles",
+		"searchResults": "Search results for \"{{term}}\": {{count}} articles found",
+		"categoryResults": "{{category}}: {{count}} articles",
+		"tagResults": "#{{tag}}: {{count}} articles",
+		"totalPosts": "{{count}} articles",
+		"clearFilters": "Clear filters",
+		"noPosts": "No articles found",
+		"noPostsDescription": "Try adjusting your search or browse all articles.",
+		"readMore": "Read More",
+		"publishedOn": "Published on",
+		"updatedOn": "Last updated",
+		"shareArticle": "Share this article",
+		"tableOfContents": "Table of Contents",
+		"copyLink": "Copy link",
+		"copiedLink": "Link copied!",
+		"newsletter": {
+			"title": "Stay Updated",
+			"description": "Get the latest insights on web development and SEO delivered to your inbox.",
+			"placeholder": "Enter your email",
+			"button": "Subscribe",
+			"success": "Thank you for subscribing!",
+			"error": "Something went wrong. Please try again."
+		}
 	}
 }
