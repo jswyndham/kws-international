@@ -38,6 +38,19 @@ export default function BlogGrid({ posts, locale, isJapanese }: BlogGridProps) {
 		},
 	};
 
+	// Filter out posts without valid slugs
+	const validPosts = posts.filter(post => post.slug?.current);
+
+	if (validPosts.length === 0) {
+		return (
+			<div className="text-center py-12">
+				<p className={`text-white/60 text-lg ${isJapanese ? 'font-notoSansJP' : ''}`}>
+					No articles available at the moment.
+				</p>
+			</div>
+		);
+	}
+
 	return (
 		<motion.div
 			className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -45,7 +58,7 @@ export default function BlogGrid({ posts, locale, isJapanese }: BlogGridProps) {
 			initial="hidden"
 			animate="visible"
 		>
-			{posts.map((post) => {
+			{validPosts.map((post) => {
 				const publishedDate = new Date(
 					post.publishedAt
 				).toLocaleDateString(isJapanese ? 'ja-JP' : 'en-US', {

@@ -1,4 +1,14 @@
-import { TableComponentProps, TableRow } from "@/types/portableTextComponents";
+export interface TableRow {
+  cells: string[];
+}
+
+export interface TableComponentProps {
+  value: {
+    rows?: TableRow[];
+    columns?: string[];
+  };
+  isJapanese?: boolean;
+}
 
 const TableComponent = ({ value }: TableComponentProps) => {
   if (!value || !value.rows) {

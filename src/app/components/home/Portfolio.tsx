@@ -23,22 +23,22 @@ const Portfolio = () => {
 
 	const projects = [
 		{
-			id: 'romancing-japan',
-			title: 'Romancing Japan',
-			logo: '/images/portfolio/logos/romancing-japan.png',
-			image: '/images/portfolio/site-image/romancing-japan.jpg',
-			url: 'https://www.romancing-japan.com/',
-			color: '#FF851B',
+			id: 'noru-kyoto',
+			title: 'Noru Kyoto Bike Tours',
+			logo: '/images/portfolio/logos/noru-kyoto.png',
+			image: '/images/portfolio/site-image/noru-kyoto.jpg',
+			url: 'https://noru.cc/',
+			color: '#4F46E5',
 			techStack: [
-				'Next.js 14',
+				'Next.js 15',
 				'Tailwind CSS',
 				'Sanity.io',
-				'SEO Optimized',
+				'Multilingual SEO',
 			],
 			highlights: [
-				{ icon: Code2, text: t('romancingPoint1') },
-				{ icon: Search, text: t('romancingPoint2') },
-				{ icon: Smartphone, text: t('romancingPoint3') },
+				{ icon: Search, text: t('noruPoint1') },
+				{ icon: Code2, text: t('noruPoint2') },
+				{ icon: Smartphone, text: t('noruPoint3') },
 			],
 		},
 		{
@@ -61,22 +61,22 @@ const Portfolio = () => {
 			],
 		},
 		{
-			id: 'noru-kyoto',
-			title: 'Noru Kyoto Bike Tours',
-			logo: '/images/portfolio/logos/noru-kyoto.png',
-			image: '/images/portfolio/site-image/noru-kyoto.jpg',
-			url: 'https://noru.cc/',
-			color: '#4F46E5',
+			id: 'romancing-japan',
+			title: 'Romancing Japan',
+			logo: '/images/portfolio/logos/romancing-japan.png',
+			image: '/images/portfolio/site-image/romancing-japan.jpg',
+			url: 'https://www.romancing-japan.com/',
+			color: '#FF851B',
 			techStack: [
-				'Next.js 15',
+				'Next.js 14',
 				'Tailwind CSS',
 				'Sanity.io',
-				'Multilingual SEO',
+				'SEO Optimized',
 			],
 			highlights: [
-				{ icon: Search, text: t('noruPoint1') },
-				{ icon: Code2, text: t('noruPoint2') },
-				{ icon: Smartphone, text: t('noruPoint3') },
+				{ icon: Code2, text: t('romancingPoint1') },
+				{ icon: Search, text: t('romancingPoint2') },
+				{ icon: Smartphone, text: t('romancingPoint3') },
 			],
 		},
 	];
@@ -110,7 +110,7 @@ const Portfolio = () => {
 					{/* Mask container - hides everything below the line */}
 					<div className="absolute bottom-0 left-0 right-0 h-full">
 						<motion.h2
-							className={`absolute text-3xl md:text-6xl lg:text-8xl font-light text-white tracking-wide ${
+							className={`absolute text-3xl md:text-5xl lg:text-7xl font-light text-white tracking-wide ${
 								isJapanese
 									? 'font-zenOldMincho'
 									: 'font-helvetica'

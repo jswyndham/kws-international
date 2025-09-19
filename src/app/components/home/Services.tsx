@@ -96,7 +96,7 @@ const Services = () => {
 					{/* Mask container - hides everything below the line */}
 					<div className="absolute bottom-0 left-0 right-0 h-full">
 						<motion.h2
-							className={`absolute pr-4 text-3xl md:text-6xl lg:text-8xl font-light text-white tracking-wide ${
+							className={`absolute pr-4 text-3xl md:text-5xl lg:text-7xl font-light text-white tracking-wide ${
 								isJapanese
 									? 'font-notoSansJP'
 									: 'font-helvetica'
@@ -138,7 +138,7 @@ const Services = () => {
 
 				{/* Subtitle */}
 				<motion.p
-					className={`text-lg md:text-xl text-white/70 max-w-3xl mt-6 pr-6 ${
+					className={`text-lg md:text-xl text-white/70 max-w-5xl mt-6 pr-6 ${
 						isJapanese ? 'font-zenOldMincho' : ''
 					}`}
 					initial={{ opacity: 0, y: 20 }}

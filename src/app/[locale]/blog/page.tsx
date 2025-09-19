@@ -149,15 +149,17 @@ export default async function BlogPage({ params, searchParams }: Props) {
 			},
 		},
 		blogPost: posts.map((post) => ({
-			'@type': 'BlogPosting',
-			headline: post.name,
-			url: `https://kyotowebstudio.com/${locale}/blog/${post.slug.current}`,
-			datePublished: post.publishedAt,
-			author: post.author?.map((a) => ({
-				'@type': 'Person',
-				name: a.name,
-			})),
-		})),
+    '@type': 'BlogPosting',
+    headline: post.name,
+    url: post.slug?.current 
+        ? `https://kyotowebstudio.com/${locale}/blog/${post.slug.current}`
+        : `https://kyotowebstudio.com/${locale}/blog`, // fallback URL
+    datePublished: post.publishedAt,
+    author: post.author?.map((a) => ({
+        '@type': 'Person',
+        name: a.name,
+    })),
+})),
 	};
 
 	return (

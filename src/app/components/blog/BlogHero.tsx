@@ -24,7 +24,7 @@ export default function BlogHero({
 	locale,
 }: BlogHeroProps) {
 	return (
-		<section className="relative py-24 bg-gradient-to-b from-black via-[#001F3F] to-[#001F3F] overflow-hidden">
+		<section className="relative pt-48 pb-24 bg-gradient-to-b from-black via-[#001F3F] to-[#001F3F] overflow-hidden">
 			{/* Animated background elements */}
 			<motion.div
 				className="absolute inset-0 opacity-20"

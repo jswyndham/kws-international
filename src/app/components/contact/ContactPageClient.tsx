@@ -72,7 +72,7 @@ const ContactPage = () => {
 	return (
 		<section className="min-h-screen py-32 bg-gradient-to-br from-[#001F3F] via-[#001F3F]/95 to-[#4F46E5]/20">
 			{/* Header with Portfolio-style animation */}
-			<div className="mb-16 pl-8 md:pl-20">
+			<div className="mb-12 lg:mb-24 pl-8 md:pl-20">
 				<div className="relative h-[120px] md:h-[100px] flex items-center">
 					<motion.div
 						className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/30 z-20"
@@ -84,7 +84,7 @@ const ContactPage = () => {
 
 					<div className="absolute bottom-0 left-0 right-0 h-full">
 						<motion.h1
-							className={`absolute text-3xl md:text-6xl lg:text-8xl font-light text-white tracking-wide ${
+							className={`absolute text-3xl md:text-5xl lg:text-7xl font-light text-white tracking-wide ${
 								isJapanese
 									? 'font-zenOldMincho'
 									: 'font-helvetica'

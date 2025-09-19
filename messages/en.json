@@ -33,7 +33,7 @@
 		"noruPoint3": "Modern tech stack ensuring scalability and performance"
 	},
 	"Services": {
-		"title": "SERVICES AVAILABLE",
+		"title": "SERVICES",
 		"subtitle": "From concept to launch, we deliver comprehensive web solutions tailored to your business needs.",
 		"wordpress": {
 			"title": "WordPress & Elementor Development",
@@ -93,7 +93,7 @@
 			}
 		},
 		"pricing": {
-			"title": "PRICING PLAN OPTIONS",
+			"title": "PRICING PLAN",
 			"subtitle": "All prices include initial consultation, design mockups, and post-launch support",
 			"tabs": {
 				"wordpress": "WordPress Development",
@@ -113,52 +113,52 @@
 				"wordpress": {
 					"starter": {
 						"name": "Starter Package",
-						"price": "¥200,000〜",
+						"price": "¥125,000〜",
 						"description": "Perfect for small businesses starting their online journey"
 					},
 					"professional": {
 						"name": "Professional Package",
-						"price": "¥350,000〜",
+						"price": "¥250,000〜",
 						"description": "Ideal for growing businesses needing advanced features"
 					},
 					"enterprise": {
 						"name": "Enterprise Package",
-						"price": "¥600,000〜",
+						"price": "¥500,000〜",
 						"description": "Complete solution for large-scale operations"
 					}
 				},
 				"custom": {
 					"landingPage": {
 						"name": "Landing Page",
-						"price": "¥300,000〜",
+						"price": "¥160,000〜",
 						"description": "High-converting single page applications"
 					},
 					"webApp": {
 						"name": "Web Application",
-						"price": "¥600,000〜",
+						"price": "¥400,000〜",
 						"description": "Full-featured custom web applications"
 					},
 					"enterprise": {
 						"name": "Enterprise Solution",
-						"price": "¥1,200,000〜",
+						"price": "¥1,000,000〜",
 						"description": "Complex systems with advanced architecture"
 					}
 				},
 				"seo": {
 					"aiContent": {
 						"name": "AI Content Writer",
-						"price": "¥50,000/month",
+						"price": "¥40,000/month",
 						"description": "AI-powered Japanese article generation with MeCab analysis"
 					},
 					"comprehensive": {
 						"name": "SEO + AI Content",
-						"price": "¥80,000/month",
+						"price": "¥70,000/month",
 						"description": "Complete SEO with AI content creation"
 					},
 					"enterprise": {
 						"name": "Enterprise SEO",
 						"price": "¥150,000+/month",
-						"description": "Unlimited AI content with full SEO management"
+						"description": "Japanese AI content with full SEO management"
 					}
 				}
 			},
@@ -292,7 +292,7 @@
 		}
 	},
 	"Contact": {
-		"title": "GET IN TOUCH",
+		"title": "CONTACT",
 		"subtitle": "Let's discuss how we can transform your digital presence and drive your business forward.",
 		"email": "Email",
 		"phone": "Phone",

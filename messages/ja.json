@@ -7,12 +7,12 @@
 		"contact": "お問い合わせ"
 	},
 	"Hero": {
-		"title": "スマートウェブサイト",
-		"subtitle": "グローバルSEO。日本製。",
-		"description": "京都から最先端の専門知識でデジタルプレゼンスを提供",
-		"ctaPrimary": "プロジェクトを開始",
-		"ctaSecondary": "サービスを見る"
-	},
+    "title": "次世代のウェブ体験",
+    "subtitle": "京都発、世界へ。",
+    "description": "京都から世界標準のウェブ開発とSEO戦略を。あなたのビジネスを世界に届けます。",
+    "ctaPrimary": "無料相談を予約",
+    "ctaSecondary": "制作実績を見る"
+},
 	"Portfolio": {
 		"title": "厳選",
 		"titleHighlight": "ポートフォリオ",
@@ -113,52 +113,52 @@
 				"wordpress": {
 					"starter": {
 						"name": "スタータープラン",
-						"price": "¥200,000〜",
+						"price": "¥125,000〜",
 						"description": "オンラインビジネスを始める小規模事業者様に最適"
 					},
 					"professional": {
 						"name": "プロフェッショナルプラン",
-						"price": "¥350,000〜",
+						"price": "¥250,000〜",
 						"description": "高度な機能を必要とする成長企業様向け"
 					},
 					"enterprise": {
 						"name": "エンタープライズプラン",
-						"price": "¥600,000〜",
+						"price": "¥500,000〜",
 						"description": "大規模な運用に対応する完全ソリューション"
 					}
 				},
 				"custom": {
 					"landingPage": {
 						"name": "ランディングページ",
-						"price": "¥300,000〜",
+						"price": "¥160,000〜",
 						"description": "高コンバージョン率のシングルページアプリケーション"
 					},
 					"webApp": {
 						"name": "ウェブアプリケーション",
-						"price": "¥600,000〜",
+						"price": "¥400,000〜",
 						"description": "フル機能のカスタムウェブアプリケーション"
 					},
 					"enterprise": {
 						"name": "エンタープライズソリューション",
-						"price": "¥1,200,000〜",
+						"price": "¥1,000,000〜",
 						"description": "高度なアーキテクチャを持つ複雑なシステム"
 					}
 				},
 				"seo": {
 					"aiContent": {
 						"name": "AIコンテンツライター",
-						"price": "¥50,000/月",
+						"price": "¥40,000/月",
 						"description": "MeCab解析を活用したAI日本語記事生成"
 					},
 					"comprehensive": {
 						"name": "SEO + AIコンテンツ",
-						"price": "¥80,000/月",
+						"price": "¥70,000/月",
 						"description": "AIコンテンツ制作付き総合SEO"
 					},
 					"enterprise": {
 						"name": "エンタープライズSEO",
 						"price": "¥150,000+/月",
-						"description": "無制限AIコンテンツと完全SEO管理"
+						"description": "日本語AIコンテンツと完全SEO管理"
 					}
 				}
 			},
@@ -338,7 +338,7 @@
 	"AboutPage": {
 		"hero": {
 			"title": "コードで文化をつなぐ",
-			"subtitle": "英国の教育者から京都のウェブ開発者へ。日本と世界の架け橋となるビジネスをサポート",
+			"subtitle": "日本と世界の架け橋となるビジネスをサポート",
 			"badges": {
 				"ukToJapan": "🇦🇺 → 🇯🇵 の旅",
 				"academicBackground": "学術研究の背景",
