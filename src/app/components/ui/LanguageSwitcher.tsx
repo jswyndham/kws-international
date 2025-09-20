@@ -3,6 +3,7 @@ import { useLocale } from 'next-intl';
 import { useTransition } from 'react';
 import { motion } from 'framer-motion';
 import { usePathname, useRouter } from '../../../i18n/routing';
+import { OptimizedMotionDiv } from './OptimizedMotionDiv';
 
 // Pill Switcher with Gradient Border
 export function LanguageSwitcherPill() {
@@ -18,7 +19,7 @@ export function LanguageSwitcherPill() {
 	};
 
 	return (
-		<motion.div
+		<OptimizedMotionDiv
 			className="relative p-[2px] rounded-full"
 			whileHover={{ scale: 1.05 }}
 		>
@@ -28,7 +29,7 @@ export function LanguageSwitcherPill() {
 			{/* Inner container */}
 			<div className="relative bg-[#001F3F] rounded-full flex p-1">
 				{/* Sliding background - now white */}
-				<motion.div
+				<OptimizedMotionDiv
 					className="absolute h-[36px] w-[70px] bg-white rounded-full"
 					animate={{ x: locale === 'ja' ? 2 : 72 }}
 					transition={{ type: 'spring', stiffness: 300, damping: 30 }}
@@ -58,7 +59,7 @@ export function LanguageSwitcherPill() {
 					<span className="font-bold">🇬🇧 EN</span>
 				</button>
 			</div>
-		</motion.div>
+		</OptimizedMotionDiv>
 	);
 }
 

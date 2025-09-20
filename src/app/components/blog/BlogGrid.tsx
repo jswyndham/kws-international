@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock, User, ArrowUpRight, Eye } from 'lucide-react';
 import { urlFor } from '../../../../lib/urlFor';
 import { BlogPostCard } from '../../../../sanity/sanity-utils-post';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 interface BlogGridProps {
 	posts: BlogPostCard[];
@@ -52,7 +53,7 @@ export default function BlogGrid({ posts, locale, isJapanese }: BlogGridProps) {
 	}
 
 	return (
-		<motion.div
+		<OptimizedMotionDiv
 			className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
 			variants={containerVariants}
 			initial="hidden"
@@ -177,6 +178,6 @@ export default function BlogGrid({ posts, locale, isJapanese }: BlogGridProps) {
 					</motion.article>
 				);
 			})}
-		</motion.div>
+		</OptimizedMotionDiv>
 	);
 }

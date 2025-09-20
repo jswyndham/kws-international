@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 interface BlogHeroProps {
 	title: string;
@@ -26,7 +27,7 @@ export default function BlogHero({
 	return (
 		<section className="relative pt-48 pb-24 bg-gradient-to-b from-black via-[#001F3F] to-[#001F3F] overflow-hidden">
 			{/* Animated background elements */}
-			<motion.div
+			<OptimizedMotionDiv
 				className="absolute inset-0 opacity-20"
 				initial={{ backgroundPosition: '0% 0%' }}
 				animate={{ backgroundPosition: '100% 100%' }}
@@ -92,7 +93,7 @@ export default function BlogHero({
 					</motion.p>
 
 					{/* Decorative line */}
-					<motion.div
+					<OptimizedMotionDiv
 						className="mt-8 mx-auto w-24 h-1 bg-gradient-to-r from-[#FF851B] to-[#06B6D4]"
 						initial={{ scaleX: 0 }}
 						animate={{ scaleX: 1 }}

@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { OptimizedMotionDiv } from './OptimizedMotionDiv';
 
 interface ProjectHighlight {
 	icon: any;
@@ -76,7 +77,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 			}`}
 		>
 			{/* Image Section */}
-			<motion.div
+			<OptimizedMotionDiv
 				className={`relative group ${isEven ? '' : 'lg:order-2'}`}
 				variants={imageVariants}
 				initial="hidden"
@@ -103,7 +104,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
 					{/* Logo overlay */}
 					<div className="absolute top-8 left-8 z-20">
-						<motion.div
+						<OptimizedMotionDiv
 							className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg"
 							whileHover={{ scale: 1.1 }}
 						>
@@ -114,13 +115,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 								height={80}
 								className="w-full h-full object-contain"
 							/>
-						</motion.div>
+						</OptimizedMotionDiv>
 					</div>
 				</a>
-			</motion.div>
+			</OptimizedMotionDiv>
 
 			{/* Content Section */}
-			<motion.div
+			<OptimizedMotionDiv
 				className={`space-y-8 ${isEven ? '' : 'lg:order-1'}`}
 				variants={contentVariants}
 				initial="hidden"
@@ -154,7 +155,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 				{/* Highlights with icons */}
 				<div className="space-y-4">
 					{project.highlights.map((highlight: any, idx: number) => (
-						<motion.div
+						<OptimizedMotionDiv
 							key={idx}
 							className="flex items-start gap-4"
 							initial={{ opacity: 0, x: -20 }}
@@ -174,12 +175,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 							>
 								{highlight.text}
 							</p>
-						</motion.div>
+						</OptimizedMotionDiv>
 					))}
 				</div>
 
 				{/* View Project Link */}
-				<motion.div
+				<OptimizedMotionDiv
 					initial={{ opacity: 0 }}
 					animate={isInView ? { opacity: 1 } : {}}
 					transition={{ duration: 0.8, delay: 0.8 }}
@@ -195,8 +196,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 						View Live Site
 						<ArrowUpRight className="w-5 h-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
 					</a>
-				</motion.div>
-			</motion.div>
+				</OptimizedMotionDiv>
+			</OptimizedMotionDiv>
 		</div>
 	);
 };

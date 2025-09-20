@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import { ChevronDown } from 'lucide-react';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const ServicesHero = () => {
 	const t = useTranslations('ServicesPage');
@@ -16,7 +17,7 @@ const ServicesHero = () => {
 			<div className="absolute inset-0 bg-gradient-to-br from-[#001F3F] via-[#001F3F]/95 to-[#4F46E5]/20" />
 
 			{/* Animated background elements */}
-			<motion.div
+			<OptimizedMotionDiv
 				className="absolute inset-0 opacity-10"
 				initial={{ backgroundPosition: '0% 0%' }}
 				animate={{ backgroundPosition: '100% 100%' }}
@@ -55,7 +56,7 @@ const ServicesHero = () => {
 					{t('hero.subtitle')}
 				</motion.p>
 
-				<motion.div
+				<OptimizedMotionDiv
 					className="flex flex-wrap justify-center gap-4 mb-12"
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
@@ -63,7 +64,7 @@ const ServicesHero = () => {
 				>
 					{['transparency', 'quality', 'support'].map(
 						(item, index) => (
-							<motion.div
+							<OptimizedMotionDiv
 								key={item}
 								className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3"
 								whileHover={{
@@ -79,24 +80,24 @@ const ServicesHero = () => {
 								>
 									{t(`hero.values.${item}`)}
 								</span>
-							</motion.div>
+							</OptimizedMotionDiv>
 						)
 					)}
-				</motion.div>
+				</OptimizedMotionDiv>
 
-				<motion.div
+				<OptimizedMotionDiv
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 1, delay: 0.8 }}
 					className="flex justify-center"
 				>
-					<motion.div
+					<OptimizedMotionDiv
 						animate={{ y: [0, 10, 0] }}
 						transition={{ duration: 2, repeat: Infinity }}
 					>
 						<ChevronDown className="w-8 h-8 text-white/60" />
-					</motion.div>
-				</motion.div>
+					</OptimizedMotionDiv>
+				</OptimizedMotionDiv>
 			</div>
 		</section>
 	);

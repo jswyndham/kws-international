@@ -5,6 +5,7 @@ import { Code2, Wrench, Globe, PenTool, Zap, TrendingUp } from 'lucide-react';
 import { Wordpress } from '../ui/Wordpress';
 import ServiceCard from '../ui/ServiceCard';
 import { useTranslations, useLocale } from 'next-intl';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const Services = () => {
 	const t = useTranslations('Services');
@@ -85,7 +86,7 @@ const Services = () => {
 				{/* Container for the entire animation */}
 				<div className="relative h-[120px] md:h-[100px] flex items-center">
 					{/* Horizontal line - acts as the "ground" */}
-					<motion.div
+					<OptimizedMotionDiv
 						className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/30 z-20"
 						initial={{ scaleX: 0 }}
 						whileInView={{ scaleX: 1 }}
@@ -152,7 +153,7 @@ const Services = () => {
 
 			<article className="max-w-7xl mx-auto px-6">
 				{/* Main Services */}
-				<motion.div
+				<OptimizedMotionDiv
 					className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 auto-rows-fr"
 					variants={containerVariants}
 					initial="hidden"
@@ -160,7 +161,7 @@ const Services = () => {
 					viewport={{ once: true, margin: '-100px' }}
 				>
 					{mainServices.map((service, index) => (
-						<motion.div key={index} variants={itemVariants}>
+						<OptimizedMotionDiv key={index} variants={itemVariants}>
 							<ServiceCard
 								icon={service.icon}
 								title={t(service.titleKey)}
@@ -173,12 +174,12 @@ const Services = () => {
 								]}
 								index={index}
 							/>
-						</motion.div>
+						</OptimizedMotionDiv>
 					))}
-				</motion.div>
+				</OptimizedMotionDiv>
 
 				{/* Additional Services */}
-				<motion.div
+				<OptimizedMotionDiv
 					className="grid grid-cols-2 md:grid-cols-4 gap-6"
 					variants={containerVariants}
 					initial="hidden"
@@ -186,19 +187,19 @@ const Services = () => {
 					viewport={{ once: true }}
 				>
 					{additionalServices.map((service, index) => (
-						<motion.div
+						<OptimizedMotionDiv
 							key={index}
 							variants={itemVariants}
 							whileHover={{ scale: 1.05, y: -5 }}
 							className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"
 						>
-							<motion.div
+							<OptimizedMotionDiv
 								initial={{ rotate: 0 }}
 								whileHover={{ rotate: 360 }}
 								transition={{ duration: 0.5 }}
 							>
 								<service.icon className="w-10 h-10 text-[#06B6D4] mx-auto mb-4" />
-							</motion.div>
+							</OptimizedMotionDiv>
 							<h4
 								className={`text-white font-semibold mb-2 ${
 									isJapanese ? 'font-notoSansJP' : ''
@@ -213,9 +214,9 @@ const Services = () => {
 							>
 								{t(service.descriptionKey)}
 							</p>
-						</motion.div>
+						</OptimizedMotionDiv>
 					))}
-				</motion.div>
+				</OptimizedMotionDiv>
 			</article>
 		</section>
 	);

@@ -6,6 +6,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '../../../i18n/routing';
 import LanguageSwitcher from '../ui/LanguageSwitcher';
 import { Menu, X } from 'lucide-react';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const Header = () => {
 	const t = useTranslations('Header');
@@ -143,7 +144,7 @@ const Header = () => {
 						<Link href="/" className="flex items-center space-x-2">
 							<AnimatePresence mode="wait">
 								{scrolled ? (
-									<motion.div
+									<OptimizedMotionDiv
 										key="logo"
 										initial="hidden"
 										animate="visible"
@@ -156,9 +157,9 @@ const Header = () => {
 											width={100}
 											height={80}
 										/>
-									</motion.div>
+									</OptimizedMotionDiv>
 								) : (
-									<motion.div
+									<OptimizedMotionDiv
 										key="logo-mobile"
 										className="md:hidden"
 										initial="hidden"
@@ -171,22 +172,22 @@ const Header = () => {
 											width={80}
 											height={64}
 										/>
-									</motion.div>
+									</OptimizedMotionDiv>
 								)}
 							</AnimatePresence>
 						</Link>
 
-						{/* Desktop Navigation */}
+						{/* Desktop Navigation - Added lg:space-x-12 for more spacing */}
 						<div className="hidden md:flex items-center gap-8">
-							<ul className="flex space-x-8 mt-12">
+							<ul className="flex space-x-8 lg:space-x-12 mt-12">
 								{navItems.map((item) => (
 									<li key={item.label}>
 										<Link
 											href={item.href}
-											className="text-white font-semibold hover:text-[#06B6D4] transition-colors relative group"
+											className="text-white font-semibold hover:text-[#06B6D4] transition-colors relative group pb-1" 
 										>
 											{t(item.label)}
-											<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF851B] transition-all group-hover:w-full"></span>
+											<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FF851B] transition-all duration-500 group-hover:w-full"></span> {/* Changed bottom-0 to -bottom-1 and added duration-500 */}
 										</Link>
 									</li>
 								))}
@@ -204,7 +205,7 @@ const Header = () => {
 						>
 							<AnimatePresence mode="wait">
 								{isMenuOpen ? (
-									<motion.div
+									<OptimizedMotionDiv
 										key="close"
 										initial={{ rotate: -90, opacity: 0 }}
 										animate={{ rotate: 0, opacity: 1 }}
@@ -212,9 +213,9 @@ const Header = () => {
 										transition={{ duration: 0.2 }}
 									>
 										<X className="w-8 h-8 text-white" />
-									</motion.div>
+									</OptimizedMotionDiv>
 								) : (
-									<motion.div
+									<OptimizedMotionDiv
 										key="menu"
 										initial={{ rotate: 90, opacity: 0 }}
 										animate={{ rotate: 0, opacity: 1 }}
@@ -222,7 +223,7 @@ const Header = () => {
 										transition={{ duration: 0.2 }}
 									>
 										<Menu className="w-8 h-8 text-white" />
-									</motion.div>
+									</OptimizedMotionDiv>
 								)}
 							</AnimatePresence>
 						</motion.button>
@@ -235,7 +236,7 @@ const Header = () => {
 				{isMenuOpen && (
 					<>
 						{/* Background Overlay */}
-						<motion.div
+						<OptimizedMotionDiv
 							className="fixed inset-0 bg-black/50 z-40 md:hidden"
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
@@ -244,7 +245,7 @@ const Header = () => {
 						/>
 
 						{/* Menu Panel */}
-						<motion.div
+						<OptimizedMotionDiv
 							className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-[#001F3F] z-50 md:hidden"
 							variants={menuVariants}
 							initial="closed"
@@ -270,16 +271,16 @@ const Header = () => {
 								</div>
 
 								{/* Language Switcher at Top */}
-								<motion.div
+								<OptimizedMotionDiv
 									className="px-6 py-4 border-b border-white/10"
 									initial={{ opacity: 0, y: -10 }}
 									animate={{ opacity: 1, y: 0 }}
 									transition={{ delay: 0.2 }}
 								>
 									<LanguageSwitcher />
-								</motion.div>
+								</OptimizedMotionDiv>
 
-								{/* Navigation Items */}
+								{/* Navigation Items - Reduced text size */}
 								<motion.nav
 									className="flex-1 px-6 py-8"
 									variants={menuContainerVariants}
@@ -288,7 +289,7 @@ const Header = () => {
 									exit="closed"
 								>
 									{navItems.map((item, index) => (
-										<motion.div
+										<OptimizedMotionDiv
 											key={item.label}
 											variants={menuItemVariants}
 											custom={index}
@@ -296,29 +297,29 @@ const Header = () => {
 											<Link
 												href={item.href}
 												onClick={handleNavClick}
-												className={`block w-full text-left py-4 text-2xl font-semibold text-white hover:text-[#06B6D4] transition-colors relative group ${
+												className={`block w-full text-left py-5 text-xl font-semibold text-white hover:text-[#06B6D4] transition-colors relative group ${
 													isJapanese
 														? 'font-notoSansJP'
 														: ''
-												}`}
+												}`} // Changed py-4 to py-3 and text-2xl to text-xl
 											>
 												{t(item.label)}
 												<motion.span
-													className="absolute bottom-3 left-0 h-0.5 bg-[#FF851B]"
+													className="absolute bottom-2 left-0 h-0.5 bg-[#FF851B]" // Changed bottom-3 to bottom-2
 													initial={{ width: 0 }}
 													whileHover={{
 														width: '100%',
 													}}
 													transition={{
-														duration: 0.3,
+														duration: 0.5, // Increased from 0.3 to 0.5
 													}}
 												/>
 											</Link>
-										</motion.div>
+										</OptimizedMotionDiv>
 									))}
 								</motion.nav>
 							</div>
-						</motion.div>
+						</OptimizedMotionDiv>
 					</>
 				)}
 			</AnimatePresence>

@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import { Target, Clock, Zap, Heart } from 'lucide-react';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const AboutPhilosophy = () => {
 	const t = useTranslations('AboutPage');
@@ -42,7 +43,7 @@ const AboutPhilosophy = () => {
 			{/* Header with animation - matching AboutStory component */}
 			<div className="mb-16 pl-8 md:pl-20">
 				<div className="relative h-[120px] md:h-[100px] flex items-center">
-					<motion.div
+					<OptimizedMotionDiv
 						className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/30 z-20"
 						initial={{ scaleX: 0 }}
 						whileInView={{ scaleX: 1 }}
@@ -109,7 +110,7 @@ const AboutPhilosophy = () => {
 					{values.map((value, index) => {
 						const Icon = value.icon;
 						return (
-							<motion.div
+							<OptimizedMotionDiv
 								key={value.titleKey}
 								className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
 								initial={{ opacity: 0, y: 30 }}
@@ -121,13 +122,13 @@ const AboutPhilosophy = () => {
 								}}
 								whileHover={{ y: -5 }}
 							>
-								<motion.div
+								<OptimizedMotionDiv
 									className={`w-16 h-16 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center mb-6`}
 									whileHover={{ rotate: 360 }}
 									transition={{ duration: 0.5 }}
 								>
 									<Icon className="w-8 h-8 text-white" />
-								</motion.div>
+								</OptimizedMotionDiv>
 
 								<h3
 									className={`text-2xl font-semibold text-white mb-3 ${
@@ -146,13 +147,13 @@ const AboutPhilosophy = () => {
 										`philosophy.values.${value.descriptionKey}`
 									)}
 								</p>
-							</motion.div>
+							</OptimizedMotionDiv>
 						);
 					})}
 				</div>
 
 				{/* AI Innovation Section */}
-				<motion.div
+				<OptimizedMotionDiv
 					className="bg-gradient-to-r from-[#FF851B]/20 to-[#4F46E5]/20 rounded-2xl p-8 md:p-12 border border-white/10"
 					initial={{ opacity: 0, scale: 0.95 }}
 					whileInView={{ opacity: 1, scale: 1 }}
@@ -174,7 +175,7 @@ const AboutPhilosophy = () => {
 						>
 							{t('philosophy.innovation.description')}
 						</p>
-						<motion.div
+						<OptimizedMotionDiv
 							className="mt-6 inline-flex items-center gap-4 text-[#06B6D4]"
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
@@ -189,9 +190,9 @@ const AboutPhilosophy = () => {
 								{t('philosophy.innovation.tagline')}
 							</span>
 							<span className="w-12 h-[2px] bg-[#06B6D4]" />
-						</motion.div>
+						</OptimizedMotionDiv>
 					</div>
-				</motion.div>
+				</OptimizedMotionDiv>
 			</div>
 		</section>
 	);

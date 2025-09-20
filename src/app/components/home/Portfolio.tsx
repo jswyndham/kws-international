@@ -6,6 +6,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { ArrowUpRight, Code2, Palette, Search, Smartphone } from 'lucide-react';
 import ProjectCard from '../ui/ProjectCard';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const Portfolio = () => {
 	const t = useTranslations('Portfolio');
@@ -87,19 +88,19 @@ const Portfolio = () => {
 			className="relative py-20 bg-[#001F3F] overflow-hidden"
 		>
 			{/* Subtle animated background */}
-			<motion.div
+			<OptimizedMotionDiv
 				className="absolute inset-0 opacity-10"
 				style={{ y: backgroundY }}
 			>
 				<div className="absolute inset-0 bg-gradient-to-br from-[#4F46E5]/20 via-transparent to-[#06B6D4]/20" />
-			</motion.div>
+			</OptimizedMotionDiv>
 
 			{/* Header */}
 			<div className="relative z-10 mb-20 pl-8 md:pl-20">
 				{/* Container for the entire animation */}
 				<div className="relative h-[120px] md:h-[100px] flex items-center">
 					{/* Horizontal line - acts as the "ground" */}
-					<motion.div
+					<OptimizedMotionDiv
 						className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/30 z-20"
 						initial={{ scaleX: 0 }}
 						whileInView={{ scaleX: 1 }}
@@ -179,7 +180,7 @@ const Portfolio = () => {
 			</div>
 
 			{/* CTA Section */}
-			<motion.div
+			<OptimizedMotionDiv
 				className="relative z-10 text-center mt-32"
 				initial={{ opacity: 0, y: 30 }}
 				whileInView={{ opacity: 1, y: 0 }}
@@ -202,7 +203,7 @@ const Portfolio = () => {
 					{t('ctaButton')}
 					<ArrowUpRight className="ml-2 w-5 h-5" />
 				</Link>
-			</motion.div>
+			</OptimizedMotionDiv>
 		</section>
 	);
 };

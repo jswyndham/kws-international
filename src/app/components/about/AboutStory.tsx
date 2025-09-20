@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import { Globe, Code, Search, Users } from 'lucide-react';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const AboutStory = () => {
 	const t = useTranslations('AboutPage');
@@ -42,7 +43,7 @@ const AboutStory = () => {
 			{/* Header with animation */}
 			<div className="mb-16 pl-8 md:pl-20">
 				<div className="relative h-[120px] md:h-[100px] flex items-center">
-					<motion.div
+					<OptimizedMotionDiv
 						className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/30 z-20"
 						initial={{ scaleX: 0 }}
 						whileInView={{ scaleX: 1 }}
@@ -107,7 +108,7 @@ const AboutStory = () => {
 				{/* Timeline */}
 				<div className="relative">
 					{/* Vertical line */}
-					<motion.div
+					<OptimizedMotionDiv
 						className="absolute left-8 top-0 bottom-0 w-[2px] bg-white/20"
 						initial={{ scaleY: 0 }}
 						whileInView={{ scaleY: 1 }}
@@ -120,7 +121,7 @@ const AboutStory = () => {
 						{milestones.map((milestone, index) => {
 							const Icon = milestone.icon;
 							return (
-								<motion.div
+								<OptimizedMotionDiv
 									key={milestone.year}
 									className="relative flex items-start gap-8"
 									initial={{ opacity: 0, x: -50 }}
@@ -132,13 +133,13 @@ const AboutStory = () => {
 									}}
 								>
 									{/* Icon */}
-									<motion.div
+									<OptimizedMotionDiv
 										className="relative z-10 w-16 h-16 bg-gradient-to-br from-[#FF851B] to-[#06B6D4] rounded-full flex items-center justify-center shadow-lg"
 										whileHover={{ scale: 1.1 }}
 										transition={{ duration: 0.3 }}
 									>
 										<Icon className="w-8 h-8 text-white" />
-									</motion.div>
+									</OptimizedMotionDiv>
 
 									{/* Content */}
 									<div className="flex-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
@@ -170,14 +171,14 @@ const AboutStory = () => {
 											)}
 										</p>
 									</div>
-								</motion.div>
+								</OptimizedMotionDiv>
 							);
 						})}
 					</div>
 				</div>
 
 				{/* Special Skills */}
-				<motion.div
+				<OptimizedMotionDiv
 					className="mt-20 grid md:grid-cols-3 gap-6"
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -189,7 +190,7 @@ const AboutStory = () => {
 						'academicApproach',
 						'localKnowledge',
 					].map((skill, index) => (
-						<motion.div
+						<OptimizedMotionDiv
 							key={skill}
 							className="bg-gradient-to-br from-[#4F46E5]/20 to-[#06B6D4]/20 rounded-xl p-6 border border-white/10"
 							whileHover={{ y: -5 }}
@@ -209,9 +210,9 @@ const AboutStory = () => {
 							>
 								{t(`story.skills.${skill}.description`)}
 							</p>
-						</motion.div>
+						</OptimizedMotionDiv>
 					))}
-				</motion.div>
+				</OptimizedMotionDiv>
 			</div>
 		</section>
 	);

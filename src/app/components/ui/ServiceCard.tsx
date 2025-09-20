@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
+import { OptimizedMotionDiv } from './OptimizedMotionDiv';
 
 interface ServiceCardProps {
 	icon: LucideIcon | React.ComponentType<{ className?: string }>;
@@ -57,7 +58,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 	};
 
 	return (
-		<motion.div
+		<OptimizedMotionDiv
 			className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group relative overflow-hidden h-full flex flex-col"
 			variants={cardVariants}
 			whileHover="hover"
@@ -66,7 +67,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 			transition={{ duration: 0.5, delay: index * 0.1 }}
 		>
 			{/* Animated background gradient */}
-			<motion.div
+			<OptimizedMotionDiv
 				className="absolute inset-0 bg-gradient-to-br from-[#FF851B]/20 to-[#06B6D4]/20 opacity-0"
 				initial={{ opacity: 0 }}
 				whileHover={{ opacity: 1 }}
@@ -74,14 +75,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 			/>
 
 			<div className="relative z-10 flex flex-col h-full">
-				<motion.div
+				<OptimizedMotionDiv
 					className="w-16 h-16 bg-gradient-to-br from-[#FF851B] to-[#06B6D4] rounded-2xl flex items-center justify-center mb-6"
 					variants={iconVariants}
 					initial="initial"
 					whileHover="hover"
 				>
 					<Icon className="w-8 h-8 text-white" />
-				</motion.div>
+				</OptimizedMotionDiv>
 
 				<motion.h3
 					className="font-notoSansJP text-xl md:text-2xl font-bold text-white mb-4"
@@ -129,7 +130,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 			</div>
 
 			{/* Animated border effect */}
-			<motion.div
+			<OptimizedMotionDiv
 				className="absolute inset-0 rounded-2xl"
 				initial={{ opacity: 0 }}
 				whileHover={{ opacity: 1 }}
@@ -146,7 +147,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 					backgroundPosition: ['200% 0', '-100% 0'],
 				}}
 			/>
-		</motion.div>
+		</OptimizedMotionDiv>
 	);
 };
 

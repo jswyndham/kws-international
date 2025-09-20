@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Search, Tag, Folder, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 interface BlogSidebarProps {
 	categories: any[];
@@ -49,7 +50,7 @@ export default function BlogSidebar({
 	return (
 		<div className="space-y-8">
 			{/* Search */}
-			<motion.div
+			<OptimizedMotionDiv
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
@@ -72,10 +73,10 @@ export default function BlogSidebar({
 						{translations.searchButton}
 					</button>
 				</form>
-			</motion.div>
+			</OptimizedMotionDiv>
 
 			{/* Categories */}
-			<motion.div
+			<OptimizedMotionDiv
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5, delay: 0.1 }}
@@ -140,10 +141,10 @@ export default function BlogSidebar({
 						);
 					})}
 				</div>
-			</motion.div>
+			</OptimizedMotionDiv>
 
 			{/* Tags */}
-			<motion.div
+			<OptimizedMotionDiv
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5, delay: 0.2 }}
@@ -179,7 +180,7 @@ export default function BlogSidebar({
 						);
 					})}
 				</div>
-			</motion.div>
+			</OptimizedMotionDiv>
 		</div>
 	);
 }

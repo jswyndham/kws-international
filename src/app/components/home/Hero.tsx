@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '../../../i18n/routing';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const Hero = () => {
     const t = useTranslations('Hero');
@@ -37,7 +38,7 @@ const Hero = () => {
             <div className="relative z-10 w-full max-w-7xl mx-auto px-6 flex flex-col xl:flex-row items-center justify-center gap-8 xl:gap-16 2xl:gap-20">
                 
                 {/* Logo Section - Reduced mobile sizes */}
-                <motion.div
+                <OptimizedMotionDiv
                     className="flex-shrink-0"
                     style={{
                         scale: logoScale,
@@ -68,7 +69,7 @@ const Hero = () => {
                             priority
                         />
                     </div>
-                </motion.div>
+                </OptimizedMotionDiv>
                 
                 {/* Content Section - Added blur animation and reduced mobile text */}
                 <div className="text-center xl:text-left flex-1">
@@ -114,7 +115,7 @@ const Hero = () => {
                         {t('description')}
                     </motion.p>
                     
-                    <motion.div
+                    <OptimizedMotionDiv
                         className="flex flex-col sm:flex-row gap-3 xl:gap-4 justify-center xl:justify-start"
                         initial={{ opacity: 0, y: 20, filter: 'blur(10px)' }}
                         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
@@ -147,7 +148,7 @@ const Hero = () => {
                         >
                             {t('ctaSecondary')}
                         </Link>
-                    </motion.div>
+                    </OptimizedMotionDiv>
                 </div>
             </div>
         </section>

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const ContactPage = () => {
 	const t = useTranslations('Contact');
@@ -74,7 +75,7 @@ const ContactPage = () => {
 			{/* Header with Portfolio-style animation */}
 			<div className="mb-12 lg:mb-24 pl-8 md:pl-20">
 				<div className="relative h-[120px] md:h-[100px] flex items-center">
-					<motion.div
+					<OptimizedMotionDiv
 						className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/30 z-20"
 						initial={{ scaleX: 0 }}
 						whileInView={{ scaleX: 1 }}
@@ -138,7 +139,7 @@ const ContactPage = () => {
 			<div className="max-w-7xl mx-auto px-6">
 				<div className="grid lg:grid-cols-3 gap-12">
 					{/* Contact Information */}
-					<motion.div
+					<OptimizedMotionDiv
 						className="lg:col-span-1 space-y-8"
 						initial={{ opacity: 0, x: -50 }}
 						whileInView={{ opacity: 1, x: 0 }}
@@ -147,7 +148,7 @@ const ContactPage = () => {
 					>
 						{/* Contact Info Cards */}
 						<div className="space-y-6">
-							<motion.div
+							<OptimizedMotionDiv
 								className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"
 								whileHover={{ scale: 1.02 }}
 								transition={{ duration: 0.3 }}
@@ -177,11 +178,11 @@ const ContactPage = () => {
 										</p>
 									</div>
 								</div>
-							</motion.div>
+							</OptimizedMotionDiv>
 						</div>
 
 						{/* Working Hours */}
-						<motion.div
+						<OptimizedMotionDiv
 							className="bg-gradient-to-br from-[#4F46E5]/20 to-[#06B6D4]/20 border border-white/10 rounded-2xl p-6"
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -203,11 +204,11 @@ const ContactPage = () => {
 								<p>{t('weekdays')}</p>
 								<p>{t('weekends')}</p>
 							</div>
-						</motion.div>
-					</motion.div>
+						</OptimizedMotionDiv>
+					</OptimizedMotionDiv>
 
 					{/* Contact Form */}
-					<motion.div
+					<OptimizedMotionDiv
 						className="lg:col-span-2"
 						initial={{ opacity: 0, x: 50 }}
 						whileInView={{ opacity: 1, x: 0 }}
@@ -438,7 +439,7 @@ const ContactPage = () => {
 
 								{/* Status Messages */}
 								{submitStatus === 'success' && (
-									<motion.div
+									<OptimizedMotionDiv
 										initial={{ opacity: 0, x: 20 }}
 										animate={{ opacity: 1, x: 0 }}
 										className="flex items-center text-green-500"
@@ -453,11 +454,11 @@ const ContactPage = () => {
 										>
 											{t('form.success')}
 										</span>
-									</motion.div>
+									</OptimizedMotionDiv>
 								)}
 
 								{submitStatus === 'error' && (
-									<motion.div
+									<OptimizedMotionDiv
 										initial={{ opacity: 0, x: 20 }}
 										animate={{ opacity: 1, x: 0 }}
 										className="flex items-center text-red-500"
@@ -472,11 +473,11 @@ const ContactPage = () => {
 										>
 											{t('form.error')}
 										</span>
-									</motion.div>
+									</OptimizedMotionDiv>
 								)}
 							</div>
 						</form>
-					</motion.div>
+					</OptimizedMotionDiv>
 				</div>
 			</div>
 		</section>

@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { ArrowRight, Calendar } from 'lucide-react';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const AboutCTA = () => {
 	const t = useTranslations('AboutPage');
@@ -14,7 +14,7 @@ const AboutCTA = () => {
 	return (
 		<section className="py-20 bg-gradient-to-br from-[#001F3F] via-[#001F3F]/95 to-[#4F46E5]/30">
 			<div className="max-w-4xl mx-auto px-6 text-center">
-				<motion.div
+				<OptimizedMotionDiv
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
@@ -59,7 +59,7 @@ const AboutCTA = () => {
 					</div>
 
 					{/* Trust Indicators */}
-					<motion.div
+					<OptimizedMotionDiv
 						className="grid grid-cols-2 md:grid-cols-4 gap-6"
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
@@ -71,7 +71,7 @@ const AboutCTA = () => {
 							'userFocused',
 							'aiPowered',
 						].map((item, index) => (
-							<motion.div
+							<OptimizedMotionDiv
 								key={item}
 								className="text-center"
 								initial={{ opacity: 0, y: 20 }}
@@ -88,10 +88,10 @@ const AboutCTA = () => {
 								>
 									{t(`cta.stats.${item}.label`)}
 								</div>
-							</motion.div>
+							</OptimizedMotionDiv>
 						))}
-					</motion.div>
-				</motion.div>
+					</OptimizedMotionDiv>
+				</OptimizedMotionDiv>
 			</div>
 		</section>
 	);

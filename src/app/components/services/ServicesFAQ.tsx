@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import { ChevronDown } from 'lucide-react';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const ServicesFAQ = () => {
 	const t = useTranslations('ServicesPage');
@@ -53,7 +54,7 @@ const ServicesFAQ = () => {
 	return (
 		<section className="py-20 bg-[#001F3F]">
 			<div className="max-w-4xl mx-auto px-6">
-				<motion.div
+				<OptimizedMotionDiv
 					className="text-center mb-12"
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -74,9 +75,9 @@ const ServicesFAQ = () => {
 					>
 						{t('faq.subtitle')}
 					</p>
-				</motion.div>
+				</OptimizedMotionDiv>
 
-				<motion.div
+				<OptimizedMotionDiv
 					className="space-y-4"
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
@@ -84,7 +85,7 @@ const ServicesFAQ = () => {
 					transition={{ duration: 0.8, delay: 0.2 }}
 				>
 					{faqItems.map((item, index) => (
-						<motion.div
+						<OptimizedMotionDiv
 							key={item.question}
 							className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
 							initial={{ opacity: 0, y: 20 }}
@@ -107,19 +108,19 @@ const ServicesFAQ = () => {
 								>
 									{t(`faq.items.${item.question}`)}
 								</h3>
-								<motion.div
+								<OptimizedMotionDiv
 									animate={{
 										rotate: openIndex === index ? 180 : 0,
 									}}
 									transition={{ duration: 0.3 }}
 								>
 									<ChevronDown className="w-5 h-5 text-white/60 group-hover:text-white transition-colors" />
-								</motion.div>
+								</OptimizedMotionDiv>
 							</button>
 
 							<AnimatePresence>
 								{openIndex === index && (
-									<motion.div
+									<OptimizedMotionDiv
 										initial={{ height: 0, opacity: 0 }}
 										animate={{ height: 'auto', opacity: 1 }}
 										exit={{ height: 0, opacity: 0 }}
@@ -136,12 +137,12 @@ const ServicesFAQ = () => {
 												{t(`faq.items.${item.answer}`)}
 											</p>
 										</div>
-									</motion.div>
+									</OptimizedMotionDiv>
 								)}
 							</AnimatePresence>
-						</motion.div>
+						</OptimizedMotionDiv>
 					))}
-				</motion.div>
+				</OptimizedMotionDiv>
 			</div>
 		</section>
 	);

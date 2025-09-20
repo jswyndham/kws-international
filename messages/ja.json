@@ -345,7 +345,7 @@
 				"userFocused": "ユーザーファースト開発"
 			},
 			"founderName": "ジェームズ・サンダース・ウィンダム",
-			"founderTitle": "創業者 / ウェブ開発者"
+			"founderTitle": "ウェブ開発者"
 		},
 		"story": {
 			"title": "私の歩み",
@@ -450,8 +450,8 @@
 	},
 	"ServicesMeta": {
 		"title": "サービス・料金 | 京都ウェブスタジオ - WordPress・React・AI SEO",
-		"description": "料金設定のウェブ開発サービス。WordPress 20万円〜、カスタムReact/Next.js 30万円〜、AI搭載SEOコンテンツ 月額5万円〜。",
-		"keywords": "ウェブ制作 料金 日本, WordPress 費用, React開発 価格, Next.js開発者, AI記事作成, SEOサービス 料金, MeCab 日本語SEO",
+		"description": "料金設定のウェブ開発サービス。WordPress 12万円〜、カスタムReact/Next.js 16万円〜、AI搭載SEOコンテンツ 月額5万円〜。",
+		"keywords": "ウェブ制作 料金 日本, WordPress 費用, React開発 価格, Next.js開発者, AI記事作成, SEOサービス 料金, 日本語SEO, 日本SEO, Japanese SEO, Japan SEO",
 		"ogImageAlt": "京都ウェブスタジオ サービス - WordPress、カスタム開発、AI SEO",
 		"servicesTitle": "ウェブ開発・SEOサービス",
 		"faq1Question": "WordPressとカスタム開発、どちらを選ぶべきですか？",
@@ -462,7 +462,7 @@
 		"faq3Answer": "WordPressサイトは通常4〜6週間、カスタム開発プロジェクトは複雑さに応じて8〜12週間かかります。"
 	},
 	"HomeMeta": {
-		"title": "京都ウェブスタジオ - 最先端のウェブ開発とSEO",
+		"title": "京都ウェブスタジオ | 最先端のウェブ開発とSEO",
 		"description": "京都から最先端のウェブ開発とSEOの専門知識でデジタルプレゼンスを変革します。グローバルSEOを備えたスマートウェブサイトを日本で制作。",
 		"keywords": "ウェブ開発 京都, SEO 日本, WordPress開発, React開発, Next.js, ウェブサイトデザイン 日本, 日本のウェブスタジオ, バイリンガルウェブサービス",
 		"ogImageAlt": "京都ウェブスタジオ - スマートウェブサイト、グローバルSEO、日本製"

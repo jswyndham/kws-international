@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const AboutHero = () => {
 	const t = useTranslations('AboutPage');
@@ -13,7 +14,7 @@ const AboutHero = () => {
 	return (
 		<section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#001F3F] via-black to-black px-4 pt-32 lg:pt-48 pb-32">
 			{/* Animated background elements */}
-			<motion.div
+			<OptimizedMotionDiv
 				className="absolute inset-0 opacity-10"
 				initial={{ backgroundPosition: '0% 0%' }}
 				animate={{ backgroundPosition: '100% 100%' }}
@@ -32,7 +33,7 @@ const AboutHero = () => {
 			<div className="relative z-10 max-w-7xl mx-auto px-6">
 				<div className="grid lg:grid-cols-2 gap-12 items-center">
 					{/* Text Content */}
-					<motion.div
+					<OptimizedMotionDiv
 						initial={{ opacity: 0, x: -50 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}
@@ -59,7 +60,7 @@ const AboutHero = () => {
 								'academicBackground',
 								'userFocused',
 							].map((item, index) => (
-								<motion.div
+								<OptimizedMotionDiv
 									key={item}
 									className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2"
 									initial={{ opacity: 0, y: 20 }}
@@ -76,13 +77,13 @@ const AboutHero = () => {
 									>
 										{t(`hero.badges.${item}`)}
 									</span>
-								</motion.div>
+								</OptimizedMotionDiv>
 							))}
 						</div>
-					</motion.div>
+					</OptimizedMotionDiv>
 
 					{/* Image/Visual Element */}
-					<motion.div
+					<OptimizedMotionDiv
 						className="relative"
 						initial={{ opacity: 0, x: 50 }}
 						animate={{ opacity: 1, x: 0 }}
@@ -101,7 +102,7 @@ const AboutHero = () => {
 							/>
 
 							{/* Bottom text container with glass morphism */}
-							<motion.div
+							<OptimizedMotionDiv
 								className="absolute -bottom-2 left-0 right-0 z-20"
 								initial={{ y: 20, opacity: 0 }}
 								animate={{ y: 0, opacity: 1 }}
@@ -109,7 +110,7 @@ const AboutHero = () => {
 							>
 								<div className="p-8">
 									{/* Decorative line */}
-									<motion.div
+									<OptimizedMotionDiv
 										className="w-20 h-1 bg-gradient-to-r from-[#FF851B] to-[#06B6D4] mb-4"
 										initial={{ scaleX: 0 }}
 										animate={{ scaleX: 1 }}
@@ -159,12 +160,12 @@ const AboutHero = () => {
 										</motion.p>
 									</div>
 								</div>
-							</motion.div>
+							</OptimizedMotionDiv>
 
 							{/* Optional: Hover effect overlay */}
 							<div className="absolute inset-0 bg-gradient-to-br from-[#FF851B]/0 to-[#06B6D4]/0 hover:from-[#FF851B]/10 hover:to-[#06B6D4]/10 transition-all duration-500 z-15" />
 						</div>
-					</motion.div>
+					</OptimizedMotionDiv>
 				</div>
 			</div>
 		</section>

@@ -13,6 +13,7 @@ import { getMessages } from 'next-intl/server';
 import { routing } from '../../i18n/routing';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
+import ScrollToTop from '../components/layout/ScrollToTop';
 
 const openSans = Open_Sans({
 	subsets: ['latin'],
@@ -191,6 +192,7 @@ export default async function LocaleLayout({
 		>
 			<body className={`${openSans.className} antialiased`}>
 				<NextIntlClientProvider messages={messages}>
+				<ScrollToTop />
 					<Header />
 					{children}
 					<Footer />

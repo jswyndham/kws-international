@@ -7,6 +7,7 @@ import { Link } from '@/i18n/routing';
 import { Check, ArrowRight } from 'lucide-react';
 import { Wordpress } from '../../components/ui/Wordpress';
 import { Code2, TrendingUp } from 'lucide-react';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const ServicesPricing = () => {
 	const t = useTranslations('ServicesPage');
@@ -29,7 +30,6 @@ const ServicesPricing = () => {
 						'basicSEO',
 						'contactForm',
 						'revisions2',
-						'delivery4weeks',
 					],
 				},
 				{
@@ -44,7 +44,6 @@ const ServicesPricing = () => {
 						'blog',
 						'analytics',
 						'revisions3',
-						'delivery6weeks',
 					],
 				},
 				{
@@ -77,7 +76,6 @@ const ServicesPricing = () => {
 						'animations',
 						'apiIntegration',
 						'performanceOptimized',
-						'delivery3weeks',
 					],
 				},
 				{
@@ -92,7 +90,6 @@ const ServicesPricing = () => {
 						'adminPanel',
 						'realtime',
 						'testing',
-						'delivery8weeks',
 					],
 				},
 				{
@@ -169,7 +166,7 @@ const ServicesPricing = () => {
 			{/* Header with animation */}
 			<div className="mb-16 pl-8 md:pl-20">
 				<div className="relative h-[120px] md:h-[100px] flex items-center">
-					<motion.div
+					<OptimizedMotionDiv
 						className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/30 z-20"
 						initial={{ scaleX: 0 }}
 						whileInView={{ scaleX: 1 }}
@@ -232,7 +229,7 @@ const ServicesPricing = () => {
 
 			<div className="max-w-7xl mx-auto px-6">
 				{/* Service Tabs */}
-				<motion.div
+				<OptimizedMotionDiv
 					className="flex flex-wrap justify-center gap-4 mb-12"
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -264,17 +261,17 @@ const ServicesPricing = () => {
 							</motion.button>
 						);
 					})}
-				</motion.div>
+				</OptimizedMotionDiv>
 
 				{/* Pricing Cards */}
-				<motion.div
+				<OptimizedMotionDiv
 					className="grid md:grid-cols-3 gap-8"
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 0.8 }}
 				>
 					{currentService.packages.map((pkg, index) => (
-						<motion.div
+						<OptimizedMotionDiv
 							key={pkg.name}
 							className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
 								pkg.popular
@@ -348,12 +345,12 @@ const ServicesPricing = () => {
 								{t('pricing.cta')}
 								<ArrowRight className="w-4 h-4" />
 							</Link>
-						</motion.div>
+						</OptimizedMotionDiv>
 					))}
-				</motion.div>
+				</OptimizedMotionDiv>
 
 				{/* Additional Services Note */}
-				<motion.div
+				<OptimizedMotionDiv
 					className="mt-12 text-center"
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
@@ -382,7 +379,7 @@ const ServicesPricing = () => {
 							</span>
 						))}
 					</div>
-				</motion.div>
+				</OptimizedMotionDiv>
 			</div>
 		</section>
 	);

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { ArrowRight, MessageSquare } from 'lucide-react';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const ServicesCTA = () => {
 	const t = useTranslations('ServicesPage');
@@ -14,7 +15,7 @@ const ServicesCTA = () => {
 	return (
 		<section className="py-20 bg-gradient-to-br from-[#001F3F] via-[#001F3F]/95 to-[#4F46E5]/30">
 			<div className="max-w-4xl mx-auto px-6 text-center">
-				<motion.div
+				<OptimizedMotionDiv
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
@@ -58,7 +59,7 @@ const ServicesCTA = () => {
 						</Link>
 					</div>
 
-					<motion.div
+					<OptimizedMotionDiv
 						className="mt-12 flex items-center justify-center gap-2 text-white/60"
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
@@ -68,8 +69,8 @@ const ServicesCTA = () => {
 						<p className={isJapanese ? 'font-zenOldMincho' : ''}>
 							{t('cta.availability')}
 						</p>
-					</motion.div>
-				</motion.div>
+					</OptimizedMotionDiv>
+				</OptimizedMotionDiv>
 			</div>
 		</section>
 	);

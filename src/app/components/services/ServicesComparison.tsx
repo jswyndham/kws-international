@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import { Check, X } from 'lucide-react';
+import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 const ServicesComparison = () => {
 	const t = useTranslations('ServicesPage');
@@ -102,7 +103,7 @@ const ServicesComparison = () => {
 	return (
 		<section className="py-20 bg-[#001F3F]/90">
 			<div className="max-w-5xl mx-auto px-6">
-				<motion.div
+				<OptimizedMotionDiv
 					className="text-center mb-12"
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -123,9 +124,9 @@ const ServicesComparison = () => {
 					>
 						{t('comparison.subtitle')}
 					</p>
-				</motion.div>
+				</OptimizedMotionDiv>
 
-				<motion.div
+				<OptimizedMotionDiv
 					className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden"
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -206,9 +207,9 @@ const ServicesComparison = () => {
 							</tbody>
 						</table>
 					</div>
-				</motion.div>
+				</OptimizedMotionDiv>
 
-				<motion.div
+				<OptimizedMotionDiv
 					className="mt-8 p-6 bg-gradient-to-r from-[#FF851B]/20 to-[#4F46E5]/20 rounded-xl border border-white/10"
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
@@ -222,7 +223,7 @@ const ServicesComparison = () => {
 					>
 						{t('comparison.note')}
 					</p>
-				</motion.div>
+				</OptimizedMotionDiv>
 			</div>
 		</section>
 	);

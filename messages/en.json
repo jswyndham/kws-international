@@ -345,7 +345,7 @@
 				"userFocused": "User-First Development"
 			},
 			"founderName": "James Saunders-Wyndham",
-			"founderTitle": "Founder / Web Developer"
+			"founderTitle": "Web Developer"
 		},
 		"story": {
 			"title": "THE JOURNEY",
@@ -452,7 +452,7 @@
 	},
 	"ServicesMeta": {
 		"title": "Service & Pricing | Kyoto Web Studio - custom websites & SEO",
-		"description": "Transparent pricing for web development services. WordPress from ¥200,000, custom React/Next.js from ¥300,000, AI-powered SEO content from ¥50,000/month.",
+		"description": "Transparent pricing for web development services. WordPress from ¥125,000, custom React/Next.js from ¥160,000, AI-powered SEO content from ¥50,000/month.",
 		"keywords": "web development pricing Japan, WordPress cost, React development price, Next.js developer, AI content writing, SEO services pricing, MeCab Japanese SEO",
 		"ogImageAlt": "Kyoto Web Studio Services - WordPress, Custom Development & AI SEO",
 		"servicesTitle": "Web Development and SEO Services",
@@ -464,13 +464,13 @@
 		"faq3Answer": "WordPress sites typically take 4-6 weeks, while custom development projects range from 8-12 weeks depending on complexity."
 	},
 	"HomeMeta": {
-		"title": "Kyoto Web Studio - Modern Web Development & SEO in Japan",
+		"title": "Kyoto Web Studio | Web Development & SEO Solutions Based in Japan",
 		"description": "Transform your digital presence with cutting-edge web development and SEO expertise from Kyoto. We create smart websites with global SEO, made in Japan.",
 		"keywords": "web development Kyoto, SEO Japan, WordPress development, React development, Next.js, website design Japan, Japanese web studio, bilingual web services",
 		"ogImageAlt": "Kyoto Web Studio - Smart Websites, Global SEO, Made in Japan"
 	},
 	"BlogMeta": {
-		"title": "Blog - Web Development & SEO Insights | Kyoto Web Studio",
+		"title": "Kyoto Web Studio | Blog - Web Development & SEO Insights",
 		"description": "Expert insights on web development, SEO strategies, and digital transformation. Learn from our experiences building successful websites in Japan.",
 		"keywords": "web development blog, SEO tips, Next.js tutorials, WordPress guides, Japanese web design, Kyoto tech blog",
 		"ogImageAlt": "Kyoto Web Studio Blog"
