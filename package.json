@@ -11,10 +11,11 @@
 	"dependencies": {
 		"@portabletext/react": "^3.2.1",
 		"@sanity/client": "^7.8.2",
+		"@sanity/code-input": "^5.1.2",
 		"@sanity/image-url": "^1.1.0",
 		"@sanity/table": "^1.1.3",
 		"@sanity/vision": "^3.93.0",
-		"@sanity/code-input": "^5.1.2",
+		"@vercel/analytics": "^1.5.0",
 		"framer-motion": "^12.23.9",
 		"groq": "^4.3.0",
 		"lucide-react": "^0.525.0",
@@ -23,9 +24,9 @@
 		"next-sanity": "^10.0.10",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
+		"react-player": "^2.16.0",
 		"react-syntax-highlighter": "^15.6.1",
-		"resend": "^4.8.0",
-		"react-player": "^2.16.0"
+		"resend": "^4.8.0"
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4.1.11",

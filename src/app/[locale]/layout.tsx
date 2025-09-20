@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata, Viewport } from 'next';
 import {
 	Anton,
@@ -197,6 +198,7 @@ export default async function LocaleLayout({
 					{children}
 					<Footer />
 				</NextIntlClientProvider>
+				<Analytics />
 			</body>
 		</html>
 	);
