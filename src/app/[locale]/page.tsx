@@ -119,16 +119,15 @@ export default async function Home({ params }: Props) {
 						url: `${baseUrl}/${locale}/contact`,
 					},
 				],
-				sameAs: [
-					'https://twitter.com/kyotowebstudio',
-					'https://www.linkedin.com/company/kyotowebstudio',
-					'https://github.com/kyotowebstudio',
-				],
+				// sameAs: [
+				// 	'https://www.linkedin.com/company/kyotowebstudio',
+				// 	'https://github.com/kyotowebstudio',
+				// ],
 				founder: {
 					'@type': 'Person',
-					name: 'Your Name', // Add founder name
+					name: 'James Saunders-Wyndham'
 				},
-				foundingDate: '2023', // Add founding year
+				foundingDate: '2024',
 				slogan: isJapanese
 					? 'グローバルSEO。日本製。'
 					: 'Global SEO. Made in Japan.',
