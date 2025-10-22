@@ -1,6 +1,6 @@
 // sanity/sanity-utils-post.ts
 import { groq } from 'next-sanity';
-import { client } from './lib/client';
+import { readClient, writeClient } from './config/client-config';
 
 // Type definitions
 export interface BlogPost {
@@ -174,7 +174,7 @@ export async function getPostBySlug(
 	slug: string,
 	language: 'en' | 'ja'
 ): Promise<BlogPost | null> {
-	return client.fetch(postBySlugQuery, { slug, language });
+	return readClient.fetch(postBySlugQuery, { slug, language });
 }
 
 // Get all posts for blog listing page with pagination
@@ -218,7 +218,7 @@ export async function getAllPosts(
 	const start = (page - 1) * pageSize;
 	const end = start + pageSize;
 
-	return client.fetch(allPostsQuery, { language, start, end });
+	return readClient.fetch(allPostsQuery, { language, start, end });
 }
 
 // Get posts by category
@@ -273,7 +273,7 @@ export async function getPostsByCategory(
 	const start = (page - 1) * pageSize;
 	const end = start + pageSize;
 
-	return client.fetch(postsByCategoryQuery, {
+	return readClient.fetch(postsByCategoryQuery, {
 		categorySlug,
 		language,
 		start,
@@ -336,7 +336,7 @@ export async function getPostsByTag(
 	const start = (page - 1) * pageSize;
 	const end = start + pageSize;
 
-	return client.fetch(postsByTagQuery, { tagSlug, language, start, end });
+	return readClient.fetch(postsByTagQuery, { tagSlug, language, start, end });
 }
 
 // Search posts
@@ -400,7 +400,7 @@ export async function searchPosts(
 	const end = start + pageSize;
 	const formattedSearchTerm = `*${searchTerm}*`;
 
-	return client.fetch(searchPostsQuery, {
+	return readClient.fetch(searchPostsQuery, {
 		searchTerm: formattedSearchTerm,
 		language,
 		start,
@@ -426,7 +426,7 @@ const allCategoriesQuery = groq`
 export async function getAllCategories(): Promise<
 	(Category & { postCount: { en: number; ja: number } })[]
 > {
-	return client.fetch(allCategoriesQuery);
+	return readClient.fetch(allCategoriesQuery);
 }
 
 // Get all tags with post count
@@ -445,7 +445,7 @@ const allTagsQuery = groq`
 export async function getAllTags(): Promise<
 	(Tag & { postCount: { en: number; ja: number } })[]
 > {
-	return client.fetch(allTagsQuery);
+	return readClient.fetch(allTagsQuery);
 }
 
 // Get recent posts (for homepage or widgets)
@@ -474,7 +474,7 @@ export async function getRecentPosts(
 	language: 'en' | 'ja',
 	limit: number = 3
 ): Promise<BlogPostCard[]> {
-	return client.fetch(recentPostsQuery, { language, limit });
+	return readClient.fetch(recentPostsQuery, { language, limit });
 }
 
 // Get popular posts (by views)
@@ -504,7 +504,7 @@ export async function getPopularPosts(
 	language: 'en' | 'ja',
 	limit: number = 5
 ): Promise<BlogPostCard[]> {
-	return client.fetch(popularPostsQuery, { language, limit });
+	return readClient.fetch(popularPostsQuery, { language, limit });
 }
 
 // Get post slugs for static generation
@@ -518,12 +518,12 @@ const allPostSlugsQuery = groq`
 export async function getAllPostSlugs(): Promise<
 	{ slug: string; language: 'en' | 'ja' }[]
 > {
-	return client.fetch(allPostSlugsQuery);
+	return readClient.fetch(allPostSlugsQuery);
 }
 
 // Update post views (to be called from API route)
 export async function incrementPostViews(postId: string): Promise<void> {
-	await client
+	await writeClient
 		.patch(postId)
 		.setIfMissing({ views: 0 })
 		.inc({ views: 1 })

@@ -10,8 +10,4 @@ export const client = createClient({
 	useCdn: process.env.NODE_ENV === 'production',
 });
 
-const builder = imageUrlBuilder(client);
 
-export function urlFor(source: SanityImageSource) {
-	return builder.image(source);
-}

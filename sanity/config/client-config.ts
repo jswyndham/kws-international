@@ -1,14 +1,21 @@
-export const writeClient = {
-	projectId: 'u4zw6a59',
-	dataset: 'production',
-	token: process.env.SANITY_API_READ_TOKEN,
-	useCdn: false,
-	apiVersion: '2023-04-25',
-};
+// sanity/config/client-config.ts
+import { createClient } from '@sanity/client';
 
-export const readClient = {
-	projectId: 'u4zw6a59',
-	dataset: 'production',
-	useCdn: true,
-	apiVersion: '2023-04-25',
-};
+export const readClient = createClient({
+    projectId: 'hewwg73z',
+    dataset: 'production',
+    token: process.env.SANITY_API_READ_TOKEN,
+    apiVersion: '2024-01-01',
+    useCdn: true,
+});
+
+export const writeClient = createClient({
+    projectId: 'hewwg73z',
+    dataset: 'production',
+    token: process.env.SANITY_API_WRITE_TOKEN,
+    apiVersion: '2024-01-01',
+    useCdn: false,
+});
+
+// Debug
+console.log('Write token exists:', !!process.env.SANITY_API_WRITE_TOKEN);
