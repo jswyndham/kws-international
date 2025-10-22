@@ -14,11 +14,8 @@ import {
 import { getTranslations } from 'next-intl/server';
 import { PortableText } from '@portabletext/react';
 import { createPortableTextComponents } from '@/app/components/blog/PortableTextComponents';
-import {
-	getPostBySlug,
-	incrementPostViews,
-} from '../../../../../../kyoto-web-studio/sanity/sanity-utils-post';
 import { urlFor } from '../../../../../lib/urlFor';
+import { getPostBySlug, incrementPostViews } from '../../../../../sanity/sanity-utils-post';
 
 type Props = {
 	params: Promise<{ locale: string; slug: string }>;
