@@ -464,7 +464,7 @@
 		"faq3Answer": "WordPress sites typically take 4-6 weeks, while custom development projects range from 8-12 weeks depending on complexity."
 	},
 	"HomeMeta": {
-		"title": "Kyoto Web Studio | Web Development & SEO Solutions Based in Japan",
+		"title": "Kyoto Web Studio | Web Development & SEO Solutions",
 		"description": "Transform your digital presence with cutting-edge web development and SEO expertise from Kyoto. We create smart websites with global SEO, made in Japan.",
 		"keywords": "web development Kyoto, SEO Japan, WordPress development, React development, Next.js, website design Japan, Japanese web studio, bilingual web services",
 		"ogImageAlt": "Kyoto Web Studio - Smart Websites, Global SEO, Made in Japan"
@@ -487,10 +487,10 @@
 		"tagsTitle": "Tags",
 		"allCategories": "All Articles",
 		"popularPosts": "Popular Articles",
-		"searchResults": "Search results for \"{{term}}\": {{count}} articles found",
-		"categoryResults": "{{category}}: {{count}} articles",
-		"tagResults": "#{{tag}}: {{count}} articles",
-		"totalPosts": "{{count}} articles",
+		"searchResults": "Search results for \"{term}\": {count} articles found",
+		"categoryResults": "{category}: {count} articles",
+		"tagResults": "#{tag}: {count} articles",
+		"totalPosts": "{count} articles",
 		"clearFilters": "Clear filters",
 		"noPosts": "No articles found",
 		"noPostsDescription": "Try adjusting your search or browse all articles.",

@@ -22,122 +22,239 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-	const { locale, slug } = await params;
-	const post = await getPostBySlug(slug, locale as 'en' | 'ja');
+    const { locale, slug } = await params;
+    const post = await getPostBySlug(slug, locale as 'en' | 'ja');
+    if (!post) return { title: 'Post Not Found' };
 
-	if (!post) return { title: 'Post Not Found' };
+    const title = post.pageName || post.name;
+    const description = post.description || post.summary;
+    const keywords = post.keywords?.join(', ');
+    const baseUrl = 'https://kyotowebstudio.com';
+    const url = `${baseUrl}/${locale}/blog/${slug}`;
+    const imageUrl = post.image
+        ? urlFor(post.image, { width: 1200, height: 630 })
+        : `${baseUrl}/images/logo.png`;
 
-	const title = post.pageName || post.name;
-	const description = post.description || post.summary;
-	const keywords = post.keywords?.join(', ');
-
-	const baseUrl = 'https://kyotowebstudio.com';
-	const url = `${baseUrl}/${locale}/blog/${slug}`;
-
-	return {
-		title,
-		description,
-		keywords,
-		openGraph: {
-			title,
-			description,
-			type: 'article',
-			publishedTime: post.publishedAt,
-			modifiedTime: post.modifiedAt,
-			authors: post.author?.map((a) => a.name),
-			url,
-			images: post.image
-				? [
-						{
-							url: urlFor(post.image, {
-								width: 1200,
-								height: 630,
-							}),
-							width: 1200,
-							height: 630,
-							alt: post.image.alt || '',
-						},
-					]
-				: [],
-			locale: locale === 'ja' ? 'ja_JP' : 'en_US',
-		},
-		twitter: {
-			card: 'summary_large_image',
-			title,
-			description,
-			images: post.image
-				? [urlFor(post.image, { width: 1200, height: 630 })]
-				: [],
-		},
-		alternates: {
-			canonical: url,
-			languages: post.translation
-				? {
-						en:
-							post.translation.language === 'en'
-								? `/en/blog/${post.translation.slug.current}`
-								: `/en/blog/${slug}`,
-						ja:
-							post.translation.language === 'ja'
-								? `/ja/blog/${post.translation.slug.current}`
-								: `/ja/blog/${slug}`,
-					}
-				: undefined,
-		},
-	};
+    return {
+        title,
+        description,
+        keywords,
+        authors: post.author?.map((a) => ({ name: a.name })),
+        openGraph: {
+            title,
+            description,
+            type: 'article',
+            publishedTime: post.publishedAt,
+            modifiedTime: post.modifiedAt || post.publishedAt,
+            authors: post.author?.map((a) => a.name),
+            url,
+            siteName: 'Kyoto Web Studio',
+            images: [
+                {
+                    url: imageUrl,
+                    width: 1200,
+                    height: 630,
+                    alt: post.image?.alt || title,
+                },
+            ],
+            locale: locale === 'ja' ? 'ja_JP' : 'en_US',
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+            images: [imageUrl],
+            creator: '@kyotowebstudio',
+            site: '@kyotowebstudio',
+        },
+        alternates: {
+            canonical: url,
+            languages: {
+                'en-US': post.translation
+                    ? `${baseUrl}/en/blog/${
+                          post.translation.language === 'en'
+                              ? post.translation.slug.current
+                              : slug
+                      }`
+                    : `${baseUrl}/en/blog/${slug}`,
+                'ja-JP': post.translation
+                    ? `${baseUrl}/ja/blog/${
+                          post.translation.language === 'ja'
+                              ? post.translation.slug.current
+                              : slug
+                      }`
+                    : `${baseUrl}/ja/blog/${slug}`,
+            },
+        },
+        robots: {
+            index: true,
+            follow: true,
+            googleBot: {
+                index: true,
+                follow: true,
+                'max-video-preview': -1,
+                'max-image-preview': 'large',
+                'max-snippet': -1,
+            },
+        },
+    };
 }
 
 export default async function BlogPostPage({ params }: Props) {
-	const { locale, slug } = await params;
-	const post = await getPostBySlug(slug, locale as 'en' | 'ja');
-	const t = await getTranslations({ locale, namespace: 'Blog' });
+    const { locale, slug } = await params;
+    const post = await getPostBySlug(slug, locale as 'en' | 'ja');
+    const t = await getTranslations({ locale, namespace: 'Blog' });
 
-	if (!post) {
-		notFound();
-	}
+    if (!post) {
+        notFound();
+    }
 
-	// Increment view count
-	await incrementPostViews(post._id);
+    // Increment view count
+    await incrementPostViews(post._id);
 
-	const isJapanese = locale === 'ja';
-	const publishedDate = new Date(post.publishedAt).toLocaleDateString(
-		isJapanese ? 'ja-JP' : 'en-US',
-		{ year: 'numeric', month: 'long', day: 'numeric' }
-	);
+    const isJapanese = locale === 'ja';
+    const baseUrl = 'https://kyotowebstudio.com';
+    const currentUrl = `${baseUrl}/${locale}/blog/${slug}`;
 
-	// Get portable text components for the current locale
-	const portableTextComponents = createPortableTextComponents(isJapanese);
+    const publishedDate = new Date(post.publishedAt).toLocaleDateString(
+        isJapanese ? 'ja-JP' : 'en-US',
+        { year: 'numeric', month: 'long', day: 'numeric' }
+    );
 
-	// Schema.org Article structured data
-	const articleJsonLd = {
-		'@context': 'https://schema.org',
-		'@type': 'BlogPosting',
-		headline: post.name,
-		description: post.description || post.summary,
-		image: post.image
-			? urlFor(post.image, { width: 1200, height: 630 })
-			: undefined,
-		datePublished: post.publishedAt,
-		dateModified: post.modifiedAt || post.publishedAt,
-		author: post.author?.map((a) => ({
-			'@type': 'Person',
-			name: a.name,
-			url: a.social?.website,
-		})),
-		publisher: {
-			'@type': 'Organization',
-			name: isJapanese ? '京都ウェブスタジオ' : 'Kyoto Web Studio',
-			logo: {
-				'@type': 'ImageObject',
-				url: 'https://kyotowebstudio.com/images/logo.png',
-			},
-		},
-		mainEntityOfPage: {
-			'@type': 'WebPage',
-			'@id': `https://kyotowebstudio.com/${locale}/blog/${slug}`,
-		},
-		keywords: post.keywords?.join(', '),
-	};
+    // Get portable text components for the current locale
+    const portableTextComponents = createPortableTextComponents(isJapanese);
+
+    // Enhanced Schema.org structured data with @graph
+    const articleJsonLd = {
+        '@context': 'https://schema.org',
+        '@graph': [
+            // Article Schema
+            {
+                '@type': 'Article',
+                '@id': `${currentUrl}#article`,
+                headline: post.name,
+                description: post.description || post.summary,
+                image: post.image
+                    ? {
+                          '@type': 'ImageObject',
+                          url: urlFor(post.image, { width: 1200, height: 630 }),
+                          width: 1200,
+                          height: 630,
+                          caption: post.image.alt || post.name,
+                      }
+                    : undefined,
+                datePublished: post.publishedAt,
+                dateModified: post.modifiedAt || post.publishedAt,
+                author: post.author?.map((author) => ({
+                    '@type': 'Person',
+                    name: author.name,
+                    ...(author.image && {
+                        image: urlFor(author.image, { width: 400, height: 400 }),
+                    }),
+                    ...(author.social?.website && { url: author.social.website }),
+                })),
+                publisher: {
+                    '@type': 'Organization',
+                    '@id': `${baseUrl}/#organization`,
+                    name: 'Kyoto Web Studio',
+                    logo: {
+                        '@type': 'ImageObject',
+                        url: `${baseUrl}/images/logo.png`,
+                        width: 600,
+                        height: 60,
+                    },
+                },
+                mainEntityOfPage: {
+                    '@type': 'WebPage',
+                    '@id': currentUrl,
+                },
+                keywords: post.keywords?.join(', ') || '',
+                articleSection:
+                    post.category?.map((cat) =>
+                        isJapanese
+                            ? cat.title.ja || cat.title.en
+                            : cat.title.en || cat.title.ja
+                    ) || [],
+                ...(post.estimatedReadingTime && {
+                    timeRequired: `PT${post.estimatedReadingTime}M`,
+                }),
+                inLanguage: isJapanese ? 'ja-JP' : 'en-US',
+            },
+            // BreadcrumbList Schema
+            {
+                '@type': 'BreadcrumbList',
+                '@id': `${currentUrl}#breadcrumb`,
+                itemListElement: [
+                    {
+                        '@type': 'ListItem',
+                        position: 1,
+                        name: isJapanese ? 'ホーム' : 'Home',
+                        item: `${baseUrl}/${locale}`,
+                    },
+                    {
+                        '@type': 'ListItem',
+                        position: 2,
+                        name: isJapanese ? '記事' : 'Blog',
+                        item: `${baseUrl}/${locale}/blog`,
+                    },
+                    {
+                        '@type': 'ListItem',
+                        position: 3,
+                        name: post.pageName || post.name,
+                        item: currentUrl,
+                    },
+                ],
+            },
+            // WebPage Schema
+            {
+                '@type': 'WebPage',
+                '@id': currentUrl,
+                url: currentUrl,
+                name: post.pageName || post.name,
+                description: post.description || post.summary,
+                datePublished: post.publishedAt,
+                dateModified: post.modifiedAt || post.publishedAt,
+                inLanguage: isJapanese ? 'ja-JP' : 'en-US',
+                isPartOf: {
+                    '@type': 'WebSite',
+                    '@id': `${baseUrl}/#website`,
+                },
+                breadcrumb: {
+                    '@id': `${currentUrl}#breadcrumb`,
+                },
+                primaryImageOfPage: post.image
+                    ? {
+                          '@type': 'ImageObject',
+                          '@id': `${currentUrl}#primaryimage`,
+                          url: urlFor(post.image, { width: 1200, height: 630 }),
+                          width: 1200,
+                          height: 630,
+                      }
+                    : undefined,
+            },
+            // FAQPage Schema (if FAQs exist)
+            ...(post.faqs && post.faqs.length > 0
+                ? [
+                      {
+                          '@type': 'FAQPage',
+                          '@id': `${currentUrl}#faq`,
+                          mainEntity: post.faqs.map((faq) => ({
+                              '@type': 'Question',
+                              name: isJapanese
+                                  ? faq.question.ja || faq.question.en
+                                  : faq.question.en || faq.question.ja,
+                              acceptedAnswer: {
+                                  '@type': 'Answer',
+                                  text: isJapanese
+                                      ? faq.answer.ja || faq.answer.en
+                                      : faq.answer.en || faq.answer.ja,
+                              },
+                          })),
+                      },
+                  ]
+                : []),
+        ],
+    };
 
 	return (
 		<>
