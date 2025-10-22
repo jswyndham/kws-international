@@ -17,7 +17,7 @@ import { createPortableTextComponents } from '@/app/components/blog/PortableText
 import {
 	getPostBySlug,
 	incrementPostViews,
-} from '../../../../../sanity/sanity-utils-post';
+} from '../../../../../../kyoto-web-studio/sanity/sanity-utils-post';
 import { urlFor } from '../../../../../lib/urlFor';
 
 type Props = {

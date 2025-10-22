@@ -1,7 +1,7 @@
 // lib/urlFor.ts
 import imageUrlBuilder from '@sanity/image-url';
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import { readClient } from '../sanity/config/client-config';
+import { readClient } from '../../kyoto-web-studio/sanity/config/client-config';
 
 const builder = imageUrlBuilder(readClient);
 

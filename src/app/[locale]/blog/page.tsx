@@ -11,7 +11,7 @@ import {
 	searchPosts,
 	getAllCategories,
 	getAllTags,
-} from '../../../../sanity/sanity-utils-post';
+} from '../../../../../kyoto-web-studio/sanity/sanity-utils-post';
 
 type Props = {
 	params: Promise<{ locale: string }>;

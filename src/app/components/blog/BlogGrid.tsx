@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, User, ArrowUpRight, Eye } from 'lucide-react';
 import { urlFor } from '../../../../lib/urlFor';
-import { BlogPostCard } from '../../../../sanity/sanity-utils-post';
+import { BlogPostCard } from '../../../../../kyoto-web-studio/sanity/sanity-utils-post';
 import { OptimizedMotionDiv } from '../ui/OptimizedMotionDiv';
 
 interface BlogGridProps {

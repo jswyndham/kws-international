@@ -7,7 +7,7 @@ import {
 	Zen_Old_Mincho,
 	Noto_Sans_JP,
 } from 'next/font/google';
-import '../globals.css';
+import '../../globals.css';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
