@@ -17,5 +17,3 @@ export const writeClient = createClient({
     useCdn: false,
 });
 
-// Debug
-console.log('Write token exists:', !!process.env.SANITY_API_WRITE_TOKEN);
